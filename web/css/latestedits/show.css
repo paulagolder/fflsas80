@@ -1,0 +1,19 @@
+
+
+div#latestedits.frame div.person a
+{
+    font-size: 8pt;
+    color: blue;
+}
+
+div#latestedits.frame div.event a
+{
+    font-size: 8pt;
+    color: green;
+}
+
+div#latestedits.frame div.image a
+{
+    font-size: 8pt;
+    color: red;
+}

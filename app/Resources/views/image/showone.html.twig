@@ -1,0 +1,60 @@
+{# views/image/showone.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/image/showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+  <div id="middle" >
+  <div id="image" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% else %}
+
+
+   {% if image %}
+     <div class="heading">
+     <div class="title">{{title}}</div> 
+            {% if is_granted('ROLE_USER') %} 
+        <div class="editbutton button1" >
+            <a class="editbutton" href = "/{{lang}}/image/addbookmark/{{image.imageid}}" >{{'bookmark.image'|trans}}</a>
+       </div>
+        {% endif %}
+         {% if is_granted('ROLE_ADMIN') %} 
+        <div class="editbutton ">
+            <a class="editbutton" href = "/admin/image/{{image.imageid}}" >{{'edit.image'|trans }}</a>
+        </div>
+        {% endif %}
+    </div>
+     <div class="content">
+       <div class="image"> 
+         <img src="{{image.fullpath}}" />
+  
+      <div class="text">
+        {{comment | raw}}
+      </div>
+      </div>
+     <div class="refs">
+     {% if refs %}
+       
+       {% for obtype , oref in refs %}
+       {% set label = obtype ~ ".links" %}
+        <div  class="linkgroup" >{{  label|trans }}</div>
+         {% for obid , ref in oref %}       
+     {#   <div class="ref" > <a href="{{ ref.link }}">{{ref.label}}</a>  </div>#}
+         <div class="ref" > <a href="{{ ref.link }}">{{ref.label}}</a>  </div>
+        {% endfor %}
+           {% endfor %}
+     {% endif %}
+    </div>
+     </div>
+  {% endif %}
+     {% endif %}
+  </div>
+  </div>
+{% endblock %}

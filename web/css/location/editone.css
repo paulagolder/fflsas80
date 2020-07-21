@@ -1,0 +1,109 @@
+
+div#editlocation > div
+{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+xdiv#editlocation div.breadcrumbs a
+{
+   color:blue;
+   text-decoration:none;
+}
+
+div#editlocation  div.heading
+{
+   display:flex;
+   font-size:1em;
+}
+
+div#editlocation div.heading > div
+{
+
+   xmargin-left: 10px;
+}
+
+div#editlocation  div.heading div.label
+{
+  
+   font-size:1em;
+   color:yellow;
+   
+}
+
+div#editlocation  div.heading div.title
+{
+  
+   font-size:1em;
+   color:maroon;
+   
+}
+
+div#editlocation div.adminform form >div
+{
+    margin-top:10px;
+    
+}
+
+ input#location_form_region
+ {
+     pointer-events: none;
+     background-color: grey;
+ }
+
+p.breadcrumbs
+{
+color:red;
+font-size : 1em;
+}
+
+
+span.title
+{
+   color:black;
+   font-size : 2em; 
+}
+
+span.subtitle
+{
+       color:black;
+font-size : 1em; 
+}
+
+div.text
+{
+       color:pink;
+font-size : 1.0em; 
+}
+
+
+ul.children
+{
+    
+       color:yellow;
+      font-size : 1.5em; 
+}
+
+div#editlocation div.children
+{
+     display:flex;
+     flex-wrap: wrap;
+}
+
+div#editlocation div.children a
+{
+     color:blue;
+     text-decoration:none;
+  
+}
+
+div#editlocation div.children div
+{
+    width:140px;
+}
+
+#mapid 
+{ 
+    height: 400px;  
+    max-width: 600px;
+}

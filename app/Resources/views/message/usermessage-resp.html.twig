@@ -1,0 +1,26 @@
+{# views/message/usermessage.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('/css/message/usermessage.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id= "usermessage" >
+<div class="heading"> 
+ <div class= "label" >{{'message.forwarded.by.admin'|trans }}</div>
+ <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div>
+
+
+<div class="mailmessage">
+<table  >
+<tr><td column-span:all>{{ message.body | raw }}</td></tr>
+</table>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,374 @@
+
+
+div#header.header
+{
+    clear : both ;
+    position:static;
+    font-size:1.2em;
+}
+
+div#header.header div.headerbody
+{
+    height: 6em;
+    align-items: center;
+}
+
+div#header.header div.headerbody div.texts
+{
+    position: absolute;
+  top: 0.5em;
+  right: 0; 
+  bottom: 0;
+  left: 0;
+     height: 6em;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+div#header.header div.headerbody div.logos
+{
+    position: absolute;
+  top: 0;
+  right: 0;  bottom: 0;
+  left: 0;
+     height: 5em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+#header  div.headertext4
+{
+    color: red;
+    
+}
+
+
+
+
+#header div.messagebar
+{
+    width:100%;   
+    background-color :rgba(0, 0, 70, 0.8);
+    display: flex;
+    align-items: center;
+    color:white;
+    height: 33px;
+    font-size: 0.8em;
+}
+
+
+
+#header div.messagebar div.languagelink
+{
+    
+    order: 1;
+    cursor: pointer;
+    
+}
+
+div#header.header div.messagebar div.languagelink.tooltip
+{
+    padding-right: 0px;
+}
+
+#header.header div.messagebar div.welcome
+{
+    order: 2;
+    padding-left: 5px;
+}
+
+#header.header div.messagebar div.status
+{
+    order: 3;
+    padding-left: 5px;
+}
+
+
+
+@keyframes flasher {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+#header.header div.messagebar div.complete a
+{
+    
+    background-color: red;
+    animation-name: flasher;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+ div#header.header div.messagebar div.complete.messbutton div
+ {
+     color:red;
+     margin-right:20px;
+ }
+
+#header.header div.messagebar div.complete
+{
+    order: 5;
+    cursor: pointer;
+}
+
+#header.header div.messagebar div.filler
+{
+    order: 4;
+    margin-left: auto;
+}
+
+div#header div.messagebar div.contactbutton
+{
+    
+    order: 7;
+    cursor: pointer;
+}
+
+
+
+div#header div.messagebar div.loginlink
+{
+    
+    order: 6;
+    cursor: pointer;
+}
+
+div#header div.messagebar div.contactlink
+{
+    
+    order: 7;
+    cursor: pointer;
+}
+
+
+div#header div.messagebar div.registerlink
+{
+    
+    order: 3;
+    cursor: pointer;
+}
+
+#header div.messagebar div.logoutlink
+{
+    
+    order: 6;
+    cursor: pointer;
+}
+
+#header div.messagebar div.filler
+{
+    flex-grow: 20;
+    order: 2;
+}
+
+div#header.header div.messagebar div.languagelink a img
+{
+    height:20px;
+}
+
+
+
+
+
+
+div#header div.messagebar  div.messbutton a
+{
+   
+    background: #e3e3e3;
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    color: #333;
+    padding: 8px 2px 8px 2px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    
+}
+
+div#header.header div.messagebar div.messbutton a:hover
+{
+    color: #e3e3e3;
+    background: #333;
+}
+
+xdiv#header.header div.messagebar div.registerlink.button
+{
+    cursor: pointer;
+}
+
+
+
+
+div#header.header div.messagebar div.loginlink
+{
+    
+     
+}
+
+div#header.header div.messagebar div.contactlink
+{
+    
+      padding-right: 5px;
+}
+
+
+@media screen and (max-width: 800px) 
+{
+
+    
+div#header.header div.headerbody 
+{
+    
+}
+    
+    div#header.header div.headerbody div.texts
+{
+    font-size: 0.8em;
+}
+    
+        div#header.header div.headerbody 
+{
+    height: 5em;
+}
+  
+div#header.header div.headerbody div.logos
+{
+     height: 4em;
+}
+
+#header.header div.messagebar 
+{
+    font-size: 0.6em;
+}
+
+div#header div.messagebar  div.messbutton a
+{
+   
+    font-size: 0.7em;
+}
+
+
+#header  div.headertext4
+{
+    order: 2;
+    padding: 0.5em 0 0.5em;
+}
+
+
+@media only screen and (max-width: 538px)
+{
+ 
+div#header.header div.headerbody 
+{
+   
+}
+
+div#header.header div.headerbody div.texts
+{
+   
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#header  div.logo1
+{
+  
+    
+}
+
+#header  div.logo1 img
+{
+    width: 2em;
+}
+
+#header  div.logo2
+{
+  
+}
+
+#header  div.logo2 img
+{
+    width : 3em;
+}
+
+
+
+
+#header  div.headertext1
+{
+    order: 1;
+}
+
+
+
+#header  div.headertext2
+{
+    display: none;
+}
+
+
+
+#header  div.headertext3
+{
+    order: 3;
+   
+}
+
+#header  div.headertext4
+{
+    order: 2;
+     padding: 0.8em;
+}
+
+
+
+#header.header div.messagebar div.welcome
+{
+    display: none;
+}
+
+#header.header div.messagebar div.status
+{
+    display: none;
+}
+
+
+
+#header.header div.messagebar 
+{
+    font-size: 0.6em;
+}
+
+div#header div.messagebar  div.messbutton a
+{
+   
+    font-size: 0.6em;
+}
+
+
+
+
+
+
+div#header.header div.messagebar div.loginlink
+{
+    
+   
+}
+
+div#header.header div.messagebar div.contactlink
+{
+    
+      
+}
+
+}
+}

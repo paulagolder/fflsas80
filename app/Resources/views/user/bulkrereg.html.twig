@@ -1,0 +1,58 @@
+{# views/user/bulkrereg.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/message/showall.css') }}" rel="stylesheet" />
+   <link href="{{ asset('/css/message/usermessage.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="message"  >
+<div class="heading">
+  <div class="label" > {{'send.bulk.message'|trans }}</div>
+ 
+
+  <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div>
+
+
+<div class="messagelist" >
+
+
+
+
+<div id= "usermessage" >
+ 
+<div class="heading"> 
+ <div class= "label" >{{'message.forwarded.by.admin'|trans }}</div>
+</div>
+
+<div class= "subheading" >
+   <div class= "label" >{{'message.to'|trans}}</div>
+   <div class="title" >{{numbertosend }}  </div>
+    <div class= "label" >{{'.recepients'|trans}}</div>
+
+</div>
+<div class= "subheading">
+   <div class= "label" >{{'message.subject'|trans }}</div>
+   <div class= "title" >{{'forced.registration'|trans }}</div>
+</div>
+
+
+</div>
+<div class="heading">
+  
+ 
+
+  <div class="deletebutton"> <a href = {{actionlink}} >{{'.send'|trans }} </a> </div>
+</div>
+
+</div>
+</div>
+
+</div>
+{% endblock %}

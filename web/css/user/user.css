@@ -1,0 +1,102 @@
+
+
+  
+
+div#fuser
+{
+    
+ 
+}
+
+
+
+
+ div#fuser div.messagelist
+ {
+     margin-top:20px;
+ }
+
+
+div#fuser div.message
+{
+       display:flex;
+       color:blue;
+}
+
+div#fuser div.messagelist div.message div.sentto
+{
+    margin-left:2em;
+} 
+
+div#fuser div.messagelist div.message div.subject
+{
+    margin-left:1em;
+}
+
+
+div#fuser div.messagelist div.message div.date
+{
+    margin-left:1em;
+}
+
+div#fuser div.messagelist div.message div.message
+{
+    margin-left:1em;
+    display: block;
+}
+
+div#fuser div.userdata
+{
+    
+    margin-bottom: 2em;
+}
+div#fuser div.userdata div.datarow div.label
+{
+    width: 9em;
+}
+
+ div#fuser div.messagelist
+ {
+     margin-top:20px;
+ }
+
+ div#fuser div.messagelist div.subheading
+ {
+     margin-bottom:10px;
+ }
+ 
+div#fuser div.message
+{
+       display:flex;
+       color:blue;
+       margin-top:2px;
+}
+
+div#fuser div.messagelist div.message div.sentto
+{
+    xwidth:10em;
+    margin-left:2em;
+} 
+div#fuser div.messagelist div.message div.subject
+{
+    xwidth:10em;
+    margin-left:1em;
+}
+
+
+div#fuser div.messagelist div.message div.date
+{
+    xwidth : 10em;
+    margin-left:1em;
+}
+
+div#fuser div.messagelist div.message div.message
+{
+    xwidth:10em;
+    margin-left:1em;
+}
+ div#message div.messagelist div#usermessage div.messagebody div.messageheading div.label{}
+
+div#usermessage  div.bodytext { font-size:12pt; color:black }
+div#usermessage  div.link { font-size:12pt;  text-align: center;  }
+div#usermessage  div.heading div.label { font-size:14pt; text-align: center; text-weight : bold; color: black }

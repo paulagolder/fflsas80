@@ -1,0 +1,56 @@
+{# views/participant/edit.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/participant/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+<div id="editparticipation"  >
+<div class="heading" >
+ <div class="label" > {{'edit.participation'|trans }} </div>
+ <div class="title"> {{personname}} : {{eventlabel}} </div>
+  <div class="returnbutton"> <a href = "{{returnlink}}" >{{'.back'|trans }} </a> </div>
+  </div>
+<div  class="form" >
+{{ form_start(form) }}
+
+    {{ form_row(form.personid)}}
+    {{ form_row(form.eventid) }}
+    {{ form_row(form.namerecorded)   }}
+    {{ form_row(form.rank) }}
+    {{ form_row(form.role) }}
+    {{ form_row(form.sdate) }}
+    {{ form_row(form.edate) }}
+     
+    <button type="submit">{{'.submit'|trans}}</button>
+{{ form_end(form) }}
+</div>
+<div class="incidents">
+ <div class="editbutton"> <a href = "/admin/incident/new/{{eventid}}/{{personid}}" >{{'create.incident'|trans }} </a> </div>
+ <div class="incidents"> 
+ <div class="subheading" >
+ <div class="label">{{'incidents'|trans}}</div>
+ </div>
+ <div class="incidentlist">
+ {% for incident in incidents %}
+ <div class='incident row selectable' > 
+    <div >{{incident.label}}</div>
+    <div class="editbutton button1" > <a  href="{{incident['link']}}">{{'.edit'|trans}}</a></div>
+     <div class="deletebutton" > <a  href="/admin/incident/delete/{{incident['incidentid']}}"  Onclick="return ConfirmDelete()" >{{'.delete'|trans}}</a></div>
+    </div>
+ {% endfor%}
+ </div>
+ </div>
+</div>
+</div>
+</div>
+{% endblock %}

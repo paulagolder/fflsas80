@@ -1,0 +1,28 @@
+{# views/accueil/showmessage.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/accueil/accueil.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div class="accueil">
+   {% if heading %}
+         <div class="heading" > {{heading|trans }}</div>
+   {% endif %}
+   {% if message %}
+      <div class="bobytext"> {{message| trans }}</div>
+   {% else %}
+
+     <h1> no news</h1>
+    
+    {% endif %}
+  </div>
+  </div>
+{% endblock %}

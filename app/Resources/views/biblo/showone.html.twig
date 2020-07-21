@@ -1,0 +1,62 @@
+{# views/biblo/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/biblo/biblo.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="biblo">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if book %}
+     <div class="heading">
+        <div class="label" > {{'.book'|trans }}</div>
+         
+       
+        <div class="returnbutton button1"> <a href = "/{{lang}}/biblo/show/all" >{{'.back'|trans }} </a> </div>
+          {% if is_granted('ROLE_ADMIN') %} 
+          <div class="editbutton" ><a class='editbutton' href="/admin/biblo/edit/{{book.bookid}}">{{'edit.book.detail'|trans}}</a></div>
+        <div class="deletebutton"> <a class='deletebutton' href ="/admin/biblo/delete/{{book.bookid}}">{{'.delete'|trans }} </a> </div>
+         
+        {% endif %}
+    </div>
+<div class="datatable"  >
+        <div class="datarow">
+            <div class="label" > {{'book.title'|trans }}</div>
+            <div class="data" > {{book.title}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'book.subtitle'|trans }}</div>
+            <div class="data" > {{book.subtitle}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'book.author'|trans }}</div>
+            <div class="data" > {{book.author}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'book.publisher'|trans }}</div>
+            <div class="data" > {{book.publisher}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'book.year'|trans }}</div>
+            <div class="data" > {{book.year}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'book.isbn'|trans }}</div>
+            <div class="data" > {{book.isbn}}</div>
+        </div>
+    </div>
+</div>
+
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+

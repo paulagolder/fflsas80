@@ -1,0 +1,104 @@
+{# views/content/editcontent.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+{% endblock %}
+ {% block js %}
+ {{ parent() }}
+ <script>
+     function clicklocation(lid)
+     {
+      
+     }
+     
+     function clickperson(pid)
+     {
+        
+     }
+ </script>
+{% endblock %}
+
+
+{% block middle %}
+  <div id="middle" >
+  <div id="content" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+   {% set founden = false %}
+    {% set foundfr = false %}
+   {% if contents %}
+   <div class="heading">
+     <div class="label" >{{'content.for.subject'|trans }} </div>
+     <div class="title" > {{subjectid}}</div>
+      <div class="returnbutton button1"> <a href = "/{{lang}}/content/{{subjectid}}" >{{'.view'|trans }} </a> </div>
+     <div class="returnbutton "> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+   </div>
+
+   {% for content in contents %}
+   {% if content.language == 'fr' %}
+     {% set foundfr = true %}
+  {% endif %}
+  {% if content.language == 'en' %}
+     {% set founden = true %}
+  {% endif %}
+  
+   <div class="contents">
+    <div class="heading" >
+      <div class="title">{{content.title}}</div> 
+      <div class="title">{{content.language}}</div> 
+      {% if content.access == 0 %}
+       <div class="title">{{'.public'|trans}}</div>  
+      {% elseif content.access == 1 %}
+        <div class="title">{{'.adminstrators'|trans}}</div>  
+       {% else %}
+        <div class="title">{{'.private'|trans}}</div>  
+     {% endif %}
+     <div class="title">{{content.tags}}</div> 
+      <div class="editbutton button1" ><a class='editbutton' href="/admin/content/edit/{{content.contentid}}">{{'edit.content'|trans}}</a></div>
+  
+      <div  ><a class='deletebutton' href="/admin/content/delete/{{content.contentid}}" Onclick="return ConfirmDelete()" >{{'delete.content'|trans}}</a></div>      
+    </div>
+     
+    <div class='textwindow resizable'>
+        {{ content.text | raw}} 
+    </div>
+
+    
+     </div>
+     
+     {% endfor%}
+  {% endif %}
+    {% if not foundfr %}
+    <div class="subheading" >
+    <div class="label" > make.french.text</div>
+     <div class="editbutton button1" >
+     <a href="/admin/content/new/{{subjectid}}/fr">{{'new.content'|trans}}</a>
+    </div>
+    </div>
+   {% endif %}
+   {% if not founden %}
+    <div class="subheading" >
+    <div class="label" > make.english.text </div>
+     <div class="editbutton button1" >
+     <a  href="/admin/content/new/{{subjectid}}/en">{{'new.content'|trans}}</a>
+    </div>
+    </div>
+   {% endif %}
+    
+   <div class="refs">
+   <div class="subheading">
+       <div  class="label" >{{'linked.from'|trans }}</div>
+       </div>
+       {% for ref in refs %}
+        <div class="ref" > <a href="/fr/{{ref.objecttype}}/{{ref.objid}}">{{ref.objecttype}}/{{ref.objid}}</a> </div>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+{% endblock %}
+
+

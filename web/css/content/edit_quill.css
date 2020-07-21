@@ -1,0 +1,41 @@
+
+
+
+
+div#contentedit div.form form div.trumbowyg-box.trumbowyg-en.trumbowyg.trumbowyg-editor-visible
+{
+    xdisplay: none;
+}
+
+div#editortext.ql-container.ql-snow
+{
+    
+    xheight:50%;
+    max-height: 1200px;
+}
+
+
+.ql-toolbar .ql-my-thing {
+  width: 60px !important;
+}
+.ql-toolbar .ql-my-thing:before {
+  content: 'My Thing';
+}
+.my-thing {
+  background: #f00;
+  color: #fff;
+}
+
+
+ div#editortext.ql-container.ql-snow div.ql-editor p strong
+{
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+div#editortext.ql-container.ql-snow div.ql-editor p
+{
+    
+}
+
+div#editortext.ql-container.ql-snow div.ql-editor p

@@ -1,0 +1,52 @@
+{# views/location/locationsearch.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/searchall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="search" class="search">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+   <div class="heading">
+      <div class="label"> {{ heading|trans }}</div>
+   </div>
+  <form  action="/admin/location/search">
+  <div class="heading">
+   <div class="label"> {{'enter.search'|trans }}</div>
+   <input type="text" name="searchfield">
+   <input type="submit" value="{{'.search'|trans }}" >
+   <div class="editbutton"><a href="/admin/location/search/*">{{'.reset'|trans}}</a></div>
+   </div>
+   </form>
+
+   {% if locations is defined %}
+     <div class="subheading">
+     <div class="label">{{subheading|trans}}</div> 
+     <div class="title">{{searchfield}}</div> 
+     <div class="title">(n={{locations | length }})</div>
+     </div>
+     <div class="searchlist" >
+         {% for location in locations  %}
+            <div class="search row" >
+             <div>{{location.name}}</div> 
+             <div class="editbutton button1"><a class="editbutton" href="/admin/location/addbookmark/{{location.locid}}">{{'.bookmark'|trans}}</a></div>
+             <div class="editbutton "><a class="editbutton" href="/{{lang}}/location/{{location.locid}}">{{'see.location'|trans}}</a></div>
+             <div class="editbutton "><a class="editbutton" href="/admin/location/edit/{{location.locid}}">{{'edit.location'|trans}}</a></div>
+            </div>
+         {% endfor %}
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+
+{% block right %}
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+{% endblock%}

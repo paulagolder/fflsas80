@@ -1,0 +1,84 @@
+{# views/person/showone.html.twig #}
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('/css/person/f_showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+    <div id="person" >
+        {% if message %}
+        <h1> {{message}}</h1>
+        {% endif %}
+        
+        {% if person is defined %}
+        {% if person %}
+        <div  class="heading">
+            <div class="title" >{{ person.fullname}} </div>
+            {% if  is_granted('ROLE_USER') %} 
+                <div class="editbutton button1" >
+                  <a class="editbutton" href = "/{{lang}}/person/addbookmark/{{person.personid}}" >{{'bookmark.person'|trans}}</a>
+                </div>
+                {% if is_granted('ROLE_ADMIN') %} 
+                  <div class="editbutton ">
+                    <a class="editbutton" href = "/admin/person/{{person.personid}}" >{{'edit.person'|trans }}</a>
+                  </div>
+                 {%  set  x =  pdffunction   %}
+                 {% if x == 'true' %}
+                    <div class="returnbutton button1" >
+                      <a class="returnbutton" href = "/{{lang}}/person/pdf/{{person.personid}}" >{{'print.transcript'|trans}}</a>
+                   </div>
+                 {% endif %}
+               {% endif %}
+           {% endif %}
+        </div>
+   
+            {% if images %}
+              <div class="imagegroup" >
+                {% for image in images %}
+                <div class="image">
+                    <div class="imageimage" ><a href="{{image.link}}"><img src="{{image.fullpath}}" /></a></div>
+                    <div class="imagelabel"> {{image.title}} </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            
+            {% if refs %}
+              <div class="refgroup" >
+                <div class="reflabel">{{'.links'|trans }} : </div>
+                <div class="reflist">
+                    {% for ref in refs %}
+                    <div class="ref" ><a href="{{ref.path}}"> {{ref.label}}</a></div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if text  %}
+              <div class="text" >
+                {{ text | raw }}
+            </div>
+            {% endif %}
+            
+            {% if eventtree %}
+              <div class="eventtree" >
+                {{ m.tree(eventtree.topNode, incidents) }} 
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endif %}
+        </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+    

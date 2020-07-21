@@ -1,0 +1,20 @@
+{# views/event/showactions.html.twig #}
+
+ {% set locale =  app.request.getLocale() | lower %}
+
+{% extends 'user.html.twig' %}
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/event/f_showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+<div id="event" >
+<div class="actionlist">
+{{ include('@pathToWeb/docs/fr/actions.htm' | raw) }}
+</div>
+</div>
+{% endblock %}

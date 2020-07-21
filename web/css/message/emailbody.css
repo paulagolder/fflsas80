@@ -1,0 +1,25 @@
+
+div#mailmessage table
+{
+    border-style :solid;
+    border-color: blue;
+    border-width:2;
+}
+
+
+
+
+
+div#mailmessage   label
+{
+  font-size: 1.0em;
+  color: yellow;
+  width: 5em;
+}
+
+div#emailresp div.messagebody
+{
+     margin-top:1em;
+    font-size: 1.1em;
+    color: blue;
+}

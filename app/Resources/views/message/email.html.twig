@@ -1,0 +1,19 @@
+{# views/message/usermessage.html.twig #}
+
+{% import 'messagebodies.twig' as m %}
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('/css/message/emailbody.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id= "emailresp" >
+<div class= "label" >{{'this.message.was.sent.by'|trans }}  </div>
+
+{{ m.emailbody1(name,datesent,sentto,fromemail, subject,body)  }} 
+</div>
+</div>
+{% endblock %}

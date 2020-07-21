@@ -1,0 +1,39 @@
+
+
+
+
+div.incidentlist nav ul
+{ 
+    height:300px;
+    xwidth:90%;
+    margin-left: -30px;
+    overflow:hidden; 
+    overflow-y:scroll;
+    display: block;
+    list-style-type: disc;
+    
+}
+
+
+div.incidentlist
+{
+     xheight: 10em;
+	border-style: double;
+	border-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background-color: rgba(76, 76, 76, 0.2);
+	xmargin: 10px;
+	padding: 10px;
+	xpadding-top: 20px;
+}
+
+div.incidentlist h1
+{
+  margin-left:0;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-right:5px;  
+}
+    
+    
+    

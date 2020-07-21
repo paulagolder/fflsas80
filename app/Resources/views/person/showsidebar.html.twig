@@ -1,0 +1,21 @@
+{# views/person/showsidebar.html.twig #}
+
+
+{% block stylesheets %}
+   <link href="{{ asset('/css/person/sidebar.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+  <div id="peoplesidebar">
+   {% if people %}
+     <div class="heading" >{{heading|trans}}</div> 
+     <nav>
+       <ul>
+         {% for person in people %}
+            <li><a href="{{ person.link}}" >{{ person.fullname}}</a> </li>
+         {% endfor %}
+      </ul>
+     </nav>
+  {% endif %}
+  </div>
+

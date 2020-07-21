@@ -1,0 +1,59 @@
+{# views/biblo/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/biblo/biblo.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/showhide.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+    <script src="{{asset('js/showhide.js')}}"></script>
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="biblos">
+    {% if message %}
+    <h1> {{message}}</h1>
+    {% endif %}
+    
+    {% if groups %}
+    <div class="heading">
+        <div class="label" >{{'bibloLinks'|trans}} </div> 
+    </div>
+    <div class="biblolist">
+        {% for tag,biblos in groups %}
+        <button class="collapsible">
+             {{ tag|trans({},'tags') }}
+            </button>
+        <div class="content">
+        {% for biblo in biblos %}
+        <div class="biblo row">
+            <div  class="label" >{{biblo.title}} </div>
+            <div class="returnbutton button1" > <a class="editbutton" href="/{{lang}}/biblo/show/{{biblo.bookid}}" >{{"link.visit"|trans }} </a> </div>
+            <div class="editbutton" > <a class="editbutton" href="/{{lang}}/biblo/addbookmark/{{biblo.bookid}}" >{{"bookmark.link"|trans }} </a> </div>
+        </div>
+        
+        {% endfor %} 
+    </div>
+        
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+</div>
+{% endblock %}
+
+
+ {% block quill %}
+ <script>
+     showhide();
+ </script>
+ {% endblock %}
+
+

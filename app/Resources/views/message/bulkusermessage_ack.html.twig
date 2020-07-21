@@ -1,0 +1,34 @@
+{# views/message/admintousermessage_ack.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('/css/message/emailbody.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id= "emailresp" >
+<div class="heading">
+<div class="label"> {{"admin.has.sent.a.message.to"|trans}}</div>
+<div class="title">{{'many.users'|trans  }}</div>
+ <div class="returnbutton button1"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div>
+
+<div class= "subheading">
+   <div class= "label" >{{'message.sent.by'|trans }}</div>
+   <div class= "title" >FFLSAS-admin </div>
+   <div class= "label" >{{'message.date'|trans}} </div>
+   <div class="title"> {{message.date_sent | date('Y-m-d')}}</div>
+</div>
+<div class= "subheading">
+   <div class= "label" >{{'message.subject'|trans }}</div>
+   <div class= "title" >{{message.subject}}</div>
+</div>
+<div class= "messagebody">
+    {{ message.body | raw }}
+</div>
+</div>
+</div>
+{% endblock %}

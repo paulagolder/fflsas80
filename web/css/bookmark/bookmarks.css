@@ -1,0 +1,25 @@
+
+
+div#bookmarks div.heading
+{
+    
+    
+}
+
+div#bookmarks 
+{
+	border-style: double;
+	border-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background-color: rgba(76, 76, 76, 0.2);
+	xmargin: 10px;
+	padding: 10px;
+	xpadding-top: 20px;
+}
+
+ div#bookmarks div.heading div.label a
+ {
+     color:yellow;
+     font-size:1em;
+     text-decoration:none;
+ }

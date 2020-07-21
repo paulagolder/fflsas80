@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<!--countries_world.kml-->
+	<open>1</open>
+
+		
+<Placemark>
+		<!--Gaza-->
+		<name>PS</name><!-- ISO_N3=275.0-->
+		<LookAt>
+			<longitude>34.34757119243876</longitude>
+			<latitude>31.39150352983015</latitude>
+			<altitude>0</altitude>
+			<heading>10</heading>
+			<tilt>10</tilt>
+			<range>700</range>
+		</LookAt>
+		<Style>
+			<IconStyle>
+				<color>00ffffff</color>
+				<scale>0.4</scale>
+				<Icon>
+					<href>http://icons.opengeo.org/markers/icon-poly.1.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<color>00ffffff</color>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>ffbd0026</color>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<MultiGeometry>
+			<!--<point>
+				<coordinates>34.34757119243876,31.39150352983015,0</coordinates>
+			</point> -->
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.24527958,31.20832795,0
+34.21251672,31.29227631,0
+34.19815067,31.32261038,0
+34.38728641,31.48376333,0
+34.47735843,31.58484243,0
+34.5241256,31.54164094,0
+34.52557254,31.52562124,0
+34.35018273,31.36276297,0
+34.34832238,31.29292227,0
+34.24527958,31.20832795,0
+
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							35.55145308,32.39551647,0
+35.5720203,32.23787751,0
+35.53470991,32.10300202,0
+35.53150598,31.98492137,0
+35.55899784,31.76552908,0
+35.49946659,31.67238231,0
+35.46546349,31.56236319,0
+35.45052901,31.47931916,0
+35.40872277,31.48293651,0
+35.27668949,31.42278514,0
+35.10119632,31.36619945,0
+34.90777144,31.35131664,0
+34.88048628,31.36816315,0
+34.87273482,31.39689525,0
+34.92921716,31.53657665,0
+34.95092126,31.60228323,0
+35.03468876,31.67323497,0
+35.1534412,31.73449738,0
+35.20367069,31.75002615,0
+35.19798628,31.77632945,0
+35.12713789,31.81676626,0
+35.05318892,31.8379536,0
+34.98301232,31.81681794,0
+34.96115319,31.82332917,0
+34.95381514,31.84126089,0
+34.97830977,31.86642731,0
+34.98978194,31.91329784,0
+34.97877486,31.99158763,0
+34.97138513,32.08708568,0
+34.95593387,32.1609313,0
+34.9994971,32.28107901,0
+35.01050418,32.33818146,0
+35.0650745,32.46042206,0
+35.19323205,32.53442272,0
+35.30381961,32.51292532,0
+35.36216231,32.50747346,0
+35.38670861,32.49302989,0
+35.40262495,32.45062938,0
+35.48442875,32.40164012,0
+35.55145308,32.39551647,0
+
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</MultiGeometry>
+	</Placemark>
+	
+</Document>
+</kml>

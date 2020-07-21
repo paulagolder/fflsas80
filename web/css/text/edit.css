@@ -1,0 +1,72 @@
+div#admintexts div.heading
+{
+    display:flex;
+}
+
+div.textref 
+{
+    
+    color : yellow;
+    font-size: 1.5em;
+    margin-bottom:20px;
+}
+
+div.textedit
+{
+    margin-top:2em;
+    color: blue;
+}
+
+ div#textedit div.textpanel
+{
+    margin-top:2em;
+     margin-bottom:2em;
+       color: blue;
+}
+
+textarea#text_form_comment
+{
+    width:400px;
+    height:250px;
+ 
+    
+}
+
+div#textedit form
+{
+    
+  margin-top:20px;
+  margin-bottom:40px;
+    
+}
+
+div#textedit form div label.required
+{
+   visibility: hidden;
+}
+
+
+
+div.formheading
+{
+        color : yellow;
+    font-size: 1.5em;
+}
+
+ div.returnbutton a 
+{
+    padding: 7px;
+display: inline;
+border-radius: 4px;
+font-family: "Arial";
+border: 0;
+margin: 0 10px;
+background: white;
+font-size: 1.2em;
+line-height: 15px;
+color: black;
+width: auto;
+height: auto;
+box-sizing: content-box;
+}
+    

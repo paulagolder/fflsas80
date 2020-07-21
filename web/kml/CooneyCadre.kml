@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.1"><Document><Style id="rectstyle"><LineStyle><color>FF00FF14</color><width>2</width></LineStyle><PolyStyle><color>1400FF14</color><fill>1</fill><outline>1</outline></PolyStyle></Style><Placemark><name>Cooney</name><styleUrl>#rectstyle</styleUrl><Polygon> <extrude>1</extrude> <altitudeMode>relativeToGround</altitudeMode> <outerBoundaryIs> <LinearRing> <count>18</count><coordinates> -3.1246461,48.5374143,0
+ -1.4825199,48.5374143,0
+ -1.4825199,47.5022197,0
+ -3.1246461,47.5022197,0</coordinates></LinearRing> </outerBoundaryIs> </Polygon> </Placemark> </Document></kml>

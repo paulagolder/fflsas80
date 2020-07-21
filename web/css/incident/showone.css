@@ -1,0 +1,64 @@
+
+div#incident div.heading
+{
+    display:flex;
+    color:maroon;
+    font-size:1.2em;
+    display:flex;
+}
+
+
+div#incident div.heading div.label
+{
+
+    color:yellow;
+    font-size:1.2em;
+}
+
+div#incident div.heading div.title
+{
+
+    color:maroon;
+    font-size:1em;
+    padding-left:10px;
+}
+
+div#incident > div
+{
+    margin-top:20px;
+}
+
+
+div#incident div.incident
+{
+    margin-top:5px; 
+}
+
+
+div#incident div.incident div.subheading
+{
+    display:flex;
+    margin-left:2em;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+div#incident div.incident div.subheading div.label
+{
+    color:yellow;
+}
+
+div#incident div.incident div.subheading div.field
+{
+    color:blue;
+    margin-left:1em;
+}
+
+
+div#incident div.incident div
+{
+    
+
+}
+
+div#mapid  { height: 400px;  }

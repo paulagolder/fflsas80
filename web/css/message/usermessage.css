@@ -1,0 +1,45 @@
+
+div#usermessage div.messagebody
+{
+    border-style :solid;
+    border-color: blue;
+    border-width:2;
+    width:90%;
+    margin-top: 2em;
+}
+
+div#usermessage div.heading 
+{
+  display:flex;
+  margin-bottom:2em;
+}
+
+
+
+div#usermessage div.subheading 
+{
+  display:flex;
+  margin-top:0.5em;
+}
+
+
+div#usermessage div.subheading div.label
+{
+  font-size: 1.0em;
+  color: yellow;
+ 
+}
+
+div#usermessage div.subheading div.title
+{
+  font-size: 1.0em;
+  color: blue;
+}
+
+
+
+
+
+div#usermessage div.messagebody  div.bodytext { font-size:12pt; color:black; width:100%; }
+div#usermessage div.messagebody  div.link { font-size:12pt;  text-align: center;  }
+div#usermessage div.messagebody  div.messageheading div.label { font-size:14pt; text-align: center; font-weight: bold; color: black }

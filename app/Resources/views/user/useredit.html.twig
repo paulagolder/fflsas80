@@ -1,0 +1,34 @@
+{# views/user/useredit.html.twig #}
+
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="usereditform"  >
+<div class="heading">
+ <div class="label" > {{'edit.user'|trans }}</div>
+
+ <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+ </div>
+<div  class="form" >
+    {{ form_start(form)}} 
+  
+    {{ form_row(form.username  ) }}
+    {{ form_row(form.plainPassword)}}
+    {{ form_row(form.membership) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.locale) }}
+    <button type="submit">{{'.submit'|trans}}</button>
+{{ form_end(form) }}
+
+</div>
+</div>
+</div>
+{% endblock %}

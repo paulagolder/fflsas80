@@ -1,0 +1,38 @@
+{# views/location/editone.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/bookmark/bookmarks.css') }}" rel="stylesheet" />
+ 
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+   <script src="{{asset('js/adminbookmarks.js')}}"></script>
+{% endblock %}
+
+
+
+
+{% block middle %}
+<div id="middle" >
+
+   <div id="bookmarks" >
+ 
+     <div class="heading">
+       <div class="label">{{'remove.bookmarks'|trans }}</div> 
+       </div>
+     {% for key1, blist in blists  %}
+        <div class="bookmark{{key1}}"> {{key1}}</div>
+       {% for key in blist | keys  %} 
+    
+      <div class="bookmark{{key1}}" >
+        <button onclick="deletebookmark('{{key1}}',{{blist[key]['id']}});">{{blist[key]['label'] }}</button>
+      </div>
+
+      {%endfor%}
+     {% endfor %}
+    </div>
+    </div>
+{% endblock %}

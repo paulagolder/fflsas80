@@ -1,0 +1,188 @@
+div#editperson
+{
+   margin-top :0.5em;
+}
+
+
+
+    
+div#editperson div.notext
+{
+   margin-top:40px; 
+}
+    
+
+
+
+
+    
+
+   
+
+ div#editperson div.refgroup   
+{
+   xdisplay:flex;
+   margin-top:40px;
+
+} 
+
+    
+ div#editperson div.refgroup div.reflist div.refref   
+{
+    color:blue;
+    font-size:1em;
+    margin-left: 1em;
+    text-decoration:none;
+}
+
+
+
+
+div#editperson div.imagegroup
+{
+    display:flex;
+    margin-top:40px;
+    #align-items: center;
+}
+
+
+div#editperson div.imagegroup div.imageedit
+{
+    flex:1;
+}
+
+div#editperson div.imagegroup div.images
+{
+    #flex:2;
+    display:flex;
+    height: 200px;
+    overflow: auto;
+    border: 2px solid blue;
+}
+
+div#editperson div.imagegroup div.images div.image
+{
+    xflex:2;
+    display:flex;
+    flex-direction: column;
+    height: 200px;
+    overflow: auto;
+    width:120px;
+      align-items: center;
+    justify-content: space-evenly;
+}
+
+div#editperson div.imagegroup div.images div.image img
+{
+    margin:10px;
+    max-width:100px;
+    max-height:100px;
+}
+
+
+
+
+ div#editperson div.imagegroup div.imageimage
+{
+     align-self: flex-start;
+    flex:1;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+ 
+ 
+div#editperson div.imagegroup div.imagelabel
+{
+    font-size: 0.75em;
+    color: blue;
+    flex:2;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div#editperson div.imagegroup div.imagedelete
+{
+    flex:1;
+    #align-self: flex-end;
+    align-items: flex-end;
+}
+
+ 
+
+ 
+
+div#editperson div.textpanel div.text
+{
+    color:blue;
+}
+
+div#editperson div.person div.notext.heading div.label.red
+{
+    color: red;
+}
+
+
+
+
+div#editperson div.noparticipants
+{
+     margin-top : 2em;
+}
+
+
+
+
+ 
+div#editperson div#person div.participants
+{
+      margin-top :40px;
+}
+  
+
+ div#editperson div.participants div.participantlist
+ {
+     margin-top:20px;
+     color: blue;
+     margin-bottom: 20px;
+     
+ }
+ 
+  div#editperson div.participants div.participantlist div.participant
+ {
+     margin-top:5px;
+     color: blue;
+     font-size:1.2em;
+     margin-left:5em;
+     display:flex;
+     align-items: center;
+     height: 25px;
+     
+ }
+
+div#editperson div.participants div.participantlist div.incident
+{
+    margin-left: 10em;
+     font-size:1.0em;
+    color:white
+
+}
+
+
+div#editperson  div.participants div.participantlist div.participant
+{
+    color:blue;
+    margin-top:5px;
+    font-size:1.0em;
+    margin-left:2em;
+}
+
+
+
+
+div#editperson div.participants div.participantlist div.incident
+{
+    color:white;
+    margin-left:3em;
+    margin-top:5px;
+}

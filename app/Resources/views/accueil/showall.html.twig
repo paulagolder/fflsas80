@@ -1,0 +1,45 @@
+{# views/accueil/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/accueil/accueil.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div class="accueil">
+   {% if message %}
+     <h1> {{message|trans }}</h1>
+   {% else %}
+
+   
+     <h1>{{'welcome.page'|trans }}</h1> 
+    
+     
+     {% if texts  %}  
+      <div class="text" >
+        {% if texts[lang] is defined %}    
+            {{ texts[lang] | raw }}
+        {% elseif  texts.FR is defined %};     
+            {{ texts["FR"] | raw }}
+        {% elseif texts.EN is defined %};     
+            {{ texts["EN"] | raw }}
+        {% endif %}
+     </div>
+   {% endif %}
+    {% if counts  %} 
+    <div class="counts" >
+    {% for count in counts %}
+     <div class="count" > {{'.count'|trans }} {{count.label|trans}}   = {{ count.number}}</div>
+     {% endfor %}
+    </div>
+    {% endif %}
+    {% endif %}
+  </div>
+  </div>
+{% endblock %}

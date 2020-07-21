@@ -1,0 +1,68 @@
+{# views/url/edit.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/url/url.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+  
+     function clickevent(eid)
+     {
+       
+     }
+     function clickimage(iid)
+     {
+       
+     }
+     
+   </script>
+{%endblock%}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="url" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+   <div class="heading">
+   {% if url.id > 0 %}
+     <div class="label">
+      {{'a.link.from'|trans}} 
+     </div>
+     <div class="title">
+          {{url.label}}
+     </div>
+  
+    
+  {% else %}
+     <div class="label">
+      {{'new.link'|trans}} 
+     </div>
+  {% endif %}
+    <div class="returnbutton button1"> <a href = "/admin/url/search"  >{{'.back'|trans }} </a> </div>
+  </div>
+
+<div  class="form" >
+{{ form_start(form) }}
+    {{ form_row(form.id) }}
+    {{ form_row(form.url) }}
+    {{ form_row(form.label) }}
+    {{ form_row(form.tags) }}
+    <button type="submit">{{'.submit'|trans}}</button>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block right %}
+
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+
+{% endblock%}

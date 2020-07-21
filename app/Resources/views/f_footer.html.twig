@@ -1,0 +1,20 @@
+
+{% block myfooter %}
+        {% set locale =  app.request.getLocale() | lower %}
+        <div  class='footer' >
+         
+                <div class='left' >
+                     <a href="/{{locale}}/menucontent/204">     <img src="{{ asset('common/symfony_white_02.png') }}" alt=""  border="0" /></a> </div>
+                <div class='center' >
+                    <a href="/{{locale}}/menucontent/205">  FFLSAS &copy;</a>
+                </div>
+                <div  class='smallright'> 
+                <a href="/{{locale}}/menucontent/194">  <img src="{{ asset('common/gdpr.png') }}" /> </a> 
+                </div>
+                <div  class='right'> 
+                    <a href="/{{locale}}/menucontent/194"> {{'admin.privacy'|trans }}</a> 
+                </div>
+    
+        </div>
+ {% endblock %}
+       

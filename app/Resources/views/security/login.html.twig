@@ -1,0 +1,53 @@
+{# views/security/login.html.twig #}
+
+ {% set locale =  app.request.getLocale() | lower %}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/login/login.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+{% if error is defined and error %}
+    <div id="loginerror" >{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+<div id="loginform" >
+<div class="headingmessage" >{{'login.message'|trans }}</div>
+<form action="{{ path('login') }}" method="post">
+<div class="form">
+<div class="username" >
+    <label for="username">{{'.username'|trans }}:</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+</div>
+<div class="password">
+    <label for="password">{{'.password'|trans }}:</label>
+    <input type="password" id="password" name="_password" />
+</div>
+</div>
+    {#
+        If you want to control the URL the user
+        is redirected to on success (more details below)
+        <input type="hidden" name="_target_path" value="/account" />
+    #}
+
+    <button type="submit">login</button>
+</form>
+
+   
+    
+</div>
+
+<div class="heading">
+ <div class="label" > {{'if.password.forgotten'|trans }}</div>
+<div class="returnbutton" > <a   href="/{{locale}}/resetpassword" > {{'reset.password'|trans }}</a></div>
+</div>
+<div class="heading">
+    <div class="label" > {{'if.not.registered'|trans }}</div>
+    <div class="returnbutton"  > <a href="/{{locale}}/register" > {{'.register'|trans }}</a></div>
+</div>
+</div>
+</div>
+{% endblock %}

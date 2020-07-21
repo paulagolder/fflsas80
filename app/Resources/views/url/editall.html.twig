@@ -1,0 +1,43 @@
+{# views/url/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/url/url.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="urls">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if furls %}
+   <div class="heading">
+     <div class="label" >{{'.urlinks'|trans}} </div> 
+     {% if is_granted('ROLE_ADMIN') %}  
+       <div class="editbutton button1" > <a class="editbutton"  href="/admin/url/edit/0" >{{"new.link"|trans }} </a> </div>
+              {% endif %}
+     </div>
+     <div class="urllist">
+   
+         {% for furl in furls %}
+           <div class="url row">
+            <div  class="label" >{{furl.label}} </div>
+             <div class="returnbutton button1" > <a class="editbutton" href="/{{lang}}/url/visit/{{furl.id}}" >{{"link.visit"|trans }} </a> </div>
+             {% if is_granted('ROLE_ADMIN') %}  
+             <div class="editbutton" > <a class="editbutton" href="/admin/url/edit/{{furl.id}}" >{{"edit.link"|trans }} </a> </div>
+            <div class="deletebutton" > <a class="deletebutton" href="/admin/url/delete/{{furl.id}}"  Onclick="return ConfirmDelete()" >{{"delete.link"|trans }} </a> </div>
+            {% endif %}
+                 </div>
+         {% endfor %}
+
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+

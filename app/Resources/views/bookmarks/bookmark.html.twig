@@ -1,0 +1,30 @@
+
+
+
+{% block stylesheets %}
+   <link href="{{ asset('/css/bookmark/bookmarks.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+ 
+   <div id="bookmarks" >
+ 
+     <div class="heading">
+      <div class="label" > <a href ="/admin/bookmark/edit" >{{'.bookmarks'|trans }}</a></div> 
+     </div>
+     {% for key1, blist in blists  %}
+        <div class="bookmark{{key1}}label"> {{key1}}</div>
+       {% for key in blist | keys  %} 
+     {% if   blist[key]['fullname'] is defined %}
+        <div class="bookmarkdelete" >
+        <a href="" onclick="click{{key1}}({key}}" >{{blist[key]['fullname'] }}</a>
+      </div>
+     {% else %}
+      <div class="bookmark{{key1}}" >
+        <button onclick="click{{key1}}({{blist[key]['id']}},'{{blist[key]['label'] |escape('js') }}');">{{blist[key]['label'] }}</button>
+      </div>
+      {% endif %}
+      {%endfor%}
+     {% endfor %}
+    </div>
+

@@ -1,0 +1,110 @@
+
+
+
+  
+
+div#message
+{
+    
+ 
+}
+
+
+
+
+
+div#message div.messagelist
+{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: blue;
+}
+
+
+
+
+div#message div.message
+{
+       display:flex;
+}
+
+div#message div.messagelist div.message.selectable
+{
+       display:flex;
+}
+
+div#message div.messagelist  div.name
+{
+    color:yellow;
+    max-width: 5em;
+    width: 5em;
+}
+
+div#message div.messagelist  div.date
+{
+   padding-left: 5px;
+   width: 6em;
+}
+
+div#message div.messagelist  div.subject
+{
+    padding-left: 5px;
+   max-width: 10em;
+   width: 10em;
+   height:1em;
+   display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+
+div#message div.messagelist  div.body
+{
+   padding-left: 5px;
+   max-width: 20em;
+   width: 20em;
+   height:1em;
+   display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+
+
+
+div#message div.fuserlist div.user div.deletebutton
+{
+   # margin-left:auto;
+}
+
+
+
+
+div#message div.fuserlist div.user
+{
+    display:flex;
+}
+
+
+
+
+
+div#message div.message
+{
+       display:flex;
+}
+ div#message div.messagebody
+ {  margin-top:1em;
+     color: blue;
+ }
+
+
+ div#message div.messagebody div.messageheading div.label{}
+
+
+div#message  div.link { font-size:12pt;  text-align: center;  }
+

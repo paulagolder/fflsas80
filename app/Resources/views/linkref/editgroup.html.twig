@@ -1,0 +1,72 @@
+{# views/linkrefs/editgroup.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/linkref/editgroup.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+     function clicklocation(lid)
+     {
+      window.location.href = '/admin/addref/{{objecttype}}/{{objid}}/location/'+lid;
+     }
+     
+     function clickperson(pid)
+     {
+        window.location.href =  '/admin/addref/{{objecttype}}/{{objid}}/person/'+pid;
+     }
+     
+      function clickevent(eid)
+     {
+        window.location.href =  '/admin/addref/{{objecttype}}/{{objid}}/event/'+eid;
+     } 
+     
+      function clickcontent(cid)
+     {
+        window.location.href =  '/admin/addref/{{objecttype}}/{{objid}}/content/'+cid;
+     } 
+     
+ </script>
+{% endblock %}
+
+
+
+
+{% block middle %}
+<div id="middle" >
+ <div id="linkref" class="editgroup" >
+   {% if message %}
+     <h1> {{message}} </h1>
+   {% else %}
+    <div class="heading" >
+      <div class="label" >{{"edit.links.for"|trans}}</div> 
+      <div class="title" >{{label}}</div> 
+      <div class="button1 editbutton">  <a class="editbutton" href= "/admin/linkref/edit/{{objecttype}}/{{objid}}/0 " > {{'add.new.linkref'|trans }}</a></div>
+    
+      <div class="returnbutton">  <a class="returnbutton" href= "{{returnlink}}" > {{'.back'|trans }}</a></div>
+     </div>
+
+   {% if refs %}
+   <div class="reflist">
+         {% for ref in refs %}
+            <div class= "row" >
+            <a href="{{ref.path}}" >{{ ref.label}}</a>
+            <div class="editbutton button1"><a class="editbutton" href= "/admin/linkref/{{objecttype}}/{{objid}}/{{ref['linkid']}} " > {{'.edit'|trans}}</a></div>
+            <div class="deletebutton">  <a class="deletebutton" href= "/admin/linkref/delete/{{objecttype}}/{{objid}}/{{ref['linkid']}}" Onclick="return ConfirmDelete()"  > {{'.delete'|trans}}</a></div>
+            </div>
+         {% endfor %}
+     </div>
+     {%endif%}
+  {% endif %}
+  </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block right %}
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+{% endblock%}

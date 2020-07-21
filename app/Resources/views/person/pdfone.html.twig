@@ -1,0 +1,90 @@
+{# views/person/pdfone.html.twig #}
+
+
+<html><head><meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}" />
+<link rel="shortcut" type="image/x-icon" href="{{asset('favicon.ico')}}" />
+        {% block title %}<title>{{'bienvenue.site'|trans }}</title>{% endblock %}
+        {% block stylesheets %}
+           <link href="{{ pathToWeb }}/css/person/pdfone.css") }}" rel="stylesheet" />
+        {% endblock %}
+
+        {% block script %}
+        <script>
+            /* page counter */
+            function subst() {
+                var vars={};
+                var x=document.location.search.substring(1).split('&');
+                for (var i in x) {var z=x[i].split('=',2);vars[z[0]] = unescape(z[1]);}
+                var x=['topage','page'];
+                for (var i in x) {
+                    var y = document.getElementsByClassName(x[i]);
+                    for (var j=0; j<y.length; ++j) y[j].textContent = vars[x[i]];
+                }
+            }
+        </script>
+        {%endblock %}
+
+       
+       
+      
+    </head>
+
+    <body onload="subst()">
+ 
+{% import 'macros.twig' as m %}
+
+  <header>
+            {{header_html|raw}}
+           
+ </header>
+
+        <footer>
+           {{footer_html|raw}}
+        </footer>
+<main>
+<div id="pdf_person" >
+
+    {% if message %}
+    <h1> {{message}}</h1>
+    {% endif %}
+    
+    {% if person is defined %}
+    {% if person %}
+    <div  class="heading">
+        <div class="title" >{{ person.fullname}} </div>
+    </div>
+    {% endif %}
+    
+    {% if images %}
+    <div class="imagegroup" >
+    <div class="imagerow">
+        {% for image in images %}
+        <div class="image">
+            <div class="imageimage" ><a href="{{image.link}}"><img src="{{image.fullpath}}" /></a></div>
+            <div class="imagelabel"> {{image.title}} </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    {% if text  %}
+    <div class="text" >
+        {{ text | raw }}
+    </div>
+    {% endif %}
+    
+    {% if eventtree %}
+    <div class="eventtree" >
+        {{ m.tree(eventtree.topNode, incidents) }} 
+    </div>
+    {% endif %}
+    {% endif %}
+</div>
+
+</main>
+
+</body>
+</html>
+

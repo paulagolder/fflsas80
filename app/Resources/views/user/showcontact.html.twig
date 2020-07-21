@@ -1,0 +1,43 @@
+{# views/user/showmessage.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/user/user.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="fuser"  >
+<div class="heading">
+  <div class="label" > {{'edit.person'|trans }}</div>
+  <div class="title" > {{user.username}} ({{user.email}}</div>
+
+  <div class="editbutton button1" ><a class='editbutton' href="/{{lang}}/useredit/{{user.userid}}">{{'edit.user.detail'|trans}}</a></div>
+  <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div>
+
+
+
+<div class="messagelist" >
+<div class="subheading" >
+  <div class="label" > {{'.message'|trans }}</div>
+</div>
+
+
+
+ <div class="subject" > {{message.subject}}</div>
+ <div class= "date" > {{message.date_sent | date("Y-m-d") }}</div>
+ <div class = "message" > {{ message.body|length > 50 ? message.body|slice(0, 50) ~ '...' : message.body  }}</div>
+ <div class = "editbutton button1">
+      <a class='editbutton' href="/{{lang}}/user/{{user.userid}}/viewmessage/{{message.id}}">{{'view.message'|trans}}</a>
+ </div>
+  <div class = "deletebutton">
+      <a class='deletebutton' href="/{{lang}}/user/{{user.userid}}/message/delete/{{message.id}}"  Onclick="return ConfirmDelete()" >{{'delete.message'|trans}}</a>
+
+</div>
+</div>
+</div>
+{% endblock %}

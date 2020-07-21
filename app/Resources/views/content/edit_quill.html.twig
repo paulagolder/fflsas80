@@ -1,0 +1,174 @@
+{# views/content/edit_quill.html.twig #}
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/content/edit_quill.css') }}" rel="stylesheet" />
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+    {% endblock %}
+    
+    {% block js %}
+    {{ parent() }}
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+    <script>
+        function clickimage(Iid,label)
+        {
+        putImage(Iid);
+        }
+        function clickcontent(Cid,label)
+        {
+        putContent(Cid);
+        }
+        function clickurl(Uid,label)
+        {
+        putUrl(Uid);
+        }
+    </script>
+    {% endblock %}
+    
+    {% block middle %}
+    <div id="middle" >
+        <div id="contentedit" >
+            
+            <div class="heading">
+                <div class="label" >{{'edit.contents'|trans }} </div>
+                <div class="title" >{{ content.title}} : {{content.contentid}} </div>
+                <div class="returnbutton button1"> <a href ="{{returnlink}}" >{{'.back'|trans }} </a> </div>
+            </div> 
+            <div class="form">
+                <form action="/admin/content/process_edit/{{content.contentid}}" method="post" >
+                    <div  >
+                        <label for="subjectid">{{'.subjectid'|trans }}</label>
+                        <input type="text" id="subjectid" name="_subjectid" value="{{content.subjectid }}" disabled="disabled" />
+                    </div>
+                    <div  >
+                        <label for="language">{{'.language'|trans }}</label>
+                        <input type="text" id="username" name="_language" value="{{content.language}}" disabled="disabled" />
+                    </div>
+                    <div  >
+                        <label for="title">{{'.title'|trans }}</label>
+                        <input type="text" id="title" name="_title" value="{{content.title }}" />
+                    </div>
+                    <div>
+                        <label class="container">{{'.public'|trans }}
+                            {% if content.access == 0 %}
+                                <input type="radio" checked="checked" name="_access" id="public"  value="0" >
+                            {% else %}
+                                <input type="radio"  name="_access" id="public"  value="0" >
+                            {% endif%}
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">{{'.admin'|trans }}
+                                {% if content.access == 1 %}
+                                <input type="radio" checked="checked" name="_access" id="admin"  value="1" >
+                            {% else %}
+                                <input type="radio"  name="_access" id="admin"  value="1" >
+                            {% endif%}
+                           <span class="checkmark"></span>
+                         </label>
+                         <label class="container">{{'.private'|trans }}
+                                  {% if content.access == 2 %}
+                                <input type="radio" checked="checked" name="_access" id="private"  value="2" >
+                            {% else %}
+                                   <input type="radio" name="_access" id="private"  value="2" >
+                            {% endif%}
+                         
+                             <span class="checkmark"></span>
+                          </label>
+                    </div>
+                     <div  >
+                        <label for="tags">{{'.tags'|trans }}</label>
+                        <input type="text" id="tags" name="_tags" value="{{content.tags }}" />
+                    </div>
+                    <input type="hidden" name="_text" value="{{ content.text  }}" >
+                         <button type="submit" id="submitbutton" style="display: none;"  >{{'.submit'|trans }} </button> 
+                </form>
+                <button onclick="saveform()">{{'click.me'|trans }}</button>  
+                <div id="editortext"   >
+                    {{ content.text | raw }}
+                </div>
+            </div>
+                <button onclick="saveform()">{{'click.me'|trans }}</button>  
+        </div>
+    </div>
+    {% endblock %}
+                    
+                    
+                    
+                    {% block quill %}
+                    <script>
+                        var Block = Quill.import('blots/block');
+                        
+                        
+                        var quill = new Quill('#editortext', {
+                        modules: {
+                        toolbar: [
+                        [{ header: [1, 2, false] }],
+                        ['bold', 'italic', 'underline'],
+                        [ 'blockquote'],
+                        [{ list: 'ordered' }, { list: 'bullet' }],
+                        [{ 'indent': '-1'}, { 'indent': '+1' }] ,
+                        [{ align: '' }, { align: 'center' }, { align: 'right' }],
+                        ]
+                        },
+                        placeholder: 'Votre contribution au FFLSAS site',
+                        theme: 'snow'
+                        });
+                        
+                        
+                        function saveform() 
+                        {
+                        var hiddentext = document.querySelector('input[name=_text]');
+                        var edstring = quill.root.innerHTML;
+                        //alert(edstring);
+                        hiddentext.value =   edstring;
+                        var submitButton = document.getElementById("submitbutton");
+                        submitButton.click(); //
+                        }
+                        
+                        function putImage(imageid)
+                        {
+                        var range = quill.getSelection(true);
+                        if (range) 
+                        {
+                        if (range.length == 0) 
+                        { 
+                        quill.insertText(range.index, '[["image":'+imageid+',"width":200]]', 'bold', true); 
+                        }
+                        }     
+                        }
+                        
+                        function putContent(contentid)
+                        {
+                        var range = quill.getSelection(true);
+                        if (range) 
+                        {
+                        if (range.length == 0) 
+                        { 
+                        quill.insertText(range.index, '[["content":'+contentid+',"width":200]]', 'bold', true); 
+                        }
+                        }     
+                        }
+                        
+                        function putUrl(urlid)
+                        {
+                        var range = quill.getSelection(true);
+                        if (range) 
+                        {
+                        if (range.length == 0) 
+                        { 
+                        quill.insertText(range.index, '[["url":'+urlid+',"label":""]]', 'bold', true); 
+                        }
+                        }     
+                        }
+                    </script>
+                    
+                    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+                    
+                    
+                    {% endblock %}
+                    

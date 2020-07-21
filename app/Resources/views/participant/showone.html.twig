@@ -1,0 +1,25 @@
+{# views/message/contact.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('participant/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+  
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if participant %}
+     <h1>{{heading}}</h1> 
+     <h2>
+        {{ participant.label}} 
+     </h2>
+  {% endif %}
+  
+{% endblock %}

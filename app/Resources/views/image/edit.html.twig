@@ -1,0 +1,40 @@
+{# views/location/edit.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/image/editone.css') }}" rel="stylesheet" />
+   
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+   
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="editimage"  >
+ <div class="heading">
+ <div class="label" > {{'create.edit.image'|trans }} </div>
+ <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+ </div>
+ <div  class="form" >
+   {{ form_start(form) }}
+   {{ form_row(form.name) }}
+    {{ form_row(form.path) }}
+     {{ form_row(form.copyright) }}
+    {{ form_row(form.format) }}
+    {{ form_row(form.access) }}
+    {{ form_row(form.imagefile) }}
+    <button type="submit">{{'create.image'|trans }}</button>
+   {{ form_end(form) }}
+  </div>
+</div>
+</div>
+{% endblock %}

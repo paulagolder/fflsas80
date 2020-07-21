@@ -1,0 +1,32 @@
+{# views/message/contact.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/image/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+  <div id="middle" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+ 
+   {% if images is defined %}
+     <h1>{{heading}}</h1> 
+     <nav>
+       <ul>
+         {% for image in images  %}
+            <li><a href="{{ image.link}}" >{{ image.path}}</a> </li>
+         {% endfor %}
+      </ul>
+     </nav>
+  {% endif %}
+  </div>
+{% endblock %}
+
+
+

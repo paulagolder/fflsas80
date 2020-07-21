@@ -1,0 +1,36 @@
+{# views/image/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/image/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}  
+<div id="middle" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if images is defined %}
+     <div class="heading">
+     <div class="label" >{{heading}}</div> 
+     </div>
+    
+         {% for image in images  %}
+            <div class="row" >
+            <div>{{image.path}} </div> :
+            <div>{{image.name}} </div> :
+             <div>{{image.imageid}} </div> :
+            
+              <div class="editbutton" ><a href="/admin/image/{{image.imageid}}" >'view'</a> </div>
+            
+            
+            </div>
+         {% endfor %}
+ 
+  {% endif %}
+  </div>
+{% endblock %}

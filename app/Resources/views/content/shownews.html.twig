@@ -1,0 +1,50 @@
+{# views/contents/adminsearch.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="content">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+
+   {% if contents is defined %}
+    <div class="news" >
+
+           {% for content in contents  %}
+      {% if loop.first %}
+       
+         <div class="latestnews" >   
+              <div class="heading">
+              <div class="title">{{content.title}}</div> 
+                  <div class="date">{{content.updatedt| date('j F Y')}}</div> 
+             <div class="editbutton "><a class="editbutton" href="/{{lang}}/content/{{content.subjectid}}">{{"view"|trans}}</a></div>
+             </div> 
+            <div class="newstext" >
+            {{content.text| raw}}
+            </div>
+            </div>
+        {% else %}
+              <div class="news" > 
+                <div class="heading"><div class="title">{{content.title}}</div> 
+                  <div class="date">{{content.updatedt| date('j F Y')}}</div> 
+             <div class="editbutton "><a class="editbutton" href="/{{lang}}/content/{{content.subjectid}}">{{"view"|trans}}</a></div>
+             </div> 
+                </div>
+             {% endif %}      
+         {% endfor %}
+     </div>
+  {% endif %}
+  </div>
+  <div>
+{% endblock %}
+
+
+

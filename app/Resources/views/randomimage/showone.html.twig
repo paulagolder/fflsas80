@@ -1,0 +1,25 @@
+
+{% block stylesheets %}
+   <link href="{{ asset('css/randomimage/showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+   {% if image %}
+    <div id="randomimage" class="frame">
+       <div class="heading">
+         <div class="label" >{{'image.chance'|trans }}</div> 
+       </div>
+       <div class="image"> 
+        <a href="{{image.link}}" > <img src="{{ image.fullpath }}" style ="max-width:100%; max-height:100%;" /></a>
+      </div>
+       <div class="subheading">
+        {% if title is defined %}
+          <div class="title">{{title}}</div> 
+        {% else %}
+          <div class="title">Title Not found</div> 
+        {% endif %}
+      
+       </div>
+   </div>
+  {% endif %}
+

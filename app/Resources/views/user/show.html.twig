@@ -1,0 +1,81 @@
+{# views/user/show.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link href="{{ asset('css/user/user.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="fuser"  >
+    
+    <div class="heading">
+        <div class="label" > {{'profil.person'|trans }}</div>
+        <div class="title" > {{user.username}}</div>
+        
+        <div class="editbutton button1" ><a class='editbutton' href="/{{lang}}/useredit/{{user.userid}}">{{'edit.user.detail'|trans}}</a></div>
+        <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+    </div>
+    
+    <div  class="userdata" >
+        <div class="datarow">
+            <div class="label" > {{'user.email'|trans }}</div>
+            <div class="data" > {{user.email}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'user.roles'|trans }}</div>
+            <div class="data" > {{user.rolestr}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'user.membership'|trans }}</div>
+            <div class="data" > {{user.membership}}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'user.locale'|trans }}</div>
+            <div class="data" > {{user.locale  }}</div>
+        </div>
+        <div class="datarow">
+            <div class="label" > {{'user.lastlogin'|trans }}</div>
+            <div class="data" > {{user.lastlogin | date("Y-m-d") }}</div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="messagelist" >
+        <div class="subheading" >
+            <div class="label" > {{'message.list'|trans }}</div>
+        </div>
+        
+        {% for message in messages %}
+        <div class= "message">
+        {% if message.toname == 'FFLSAS-admin' %}
+          {% set sentto = ('user.to.admin'|trans ) %}
+          
+        {% else %}
+         {% set sentto = ('admin.to.user'|trans ) %}
+         {% endif %}
+            <div class="subject" > {{sentto}}</div>
+            <div class="subject" > {{message.subject}}</div>
+            <div class= "date" > {{message.date_sent | date("Y-m-d") }}</div>
+            <div class = "editbutton button1">
+                <a class='editbutton' href="/{{lang}}/user/{{user.userid}}/viewmessage/{{message.id}}">{{'view.message'|trans}}</a>
+            </div>
+            <div class = "deletebutton">
+                <a class='deletebutton' href="/{{lang}}/user/{{user.userid}}/message/delete/{{message.id}}" Onclick="return ConfirmDelete()" >{{'delete.message'|trans}}</a>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+</div>
+{% endblock %}
+    

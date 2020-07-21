@@ -1,0 +1,34 @@
+{# views/incident/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/incident/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+
+{% block middle %}
+<div id="middle" >
+  <div class="incidents">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if incidents %}
+     <h1>{{heading|trans}} ({{ incidents | length }} )</h1> 
+     <div class="incidentlist">
+     <nav>
+       <ul>
+         {% for incident in incidents %}
+            <li><a href="{{incident.link}}" >{{incident.label}} </a></li>
+         {% endfor %}
+      </ul>
+     </nav>
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+
+
+
+  
+
+div#url
+{
+    
+
+}
+
+div#url  div.datarow div.label
+{
+    width: 3em;
+}
+
+div#url div.visitbutton 
+{
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+}
+
+div#url div.visitbutton a
+{
+   font-size:20pt;;
+}

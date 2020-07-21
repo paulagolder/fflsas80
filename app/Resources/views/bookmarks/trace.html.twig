@@ -1,0 +1,71 @@
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/location/editone.css') }}" rel="stylesheet" />
+ 
+   <link href="{{ asset('/css/bookmark/bookmarks.css') }}" rel="stylesheet" />
+
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+
+  <script>
+     function clickevent(eid)
+     {
+        window.location.href = '/admin/event/'+eid;
+     }
+     function clickimage(iid)
+     {
+        window.location.href = '/admin/image/'+iid;
+     }
+     function clickperson(pid)
+     {
+        window.location.href = '/admin/person/'+pid;
+     }
+     function clicklocation(lid)
+     {
+        window.location.href = '/admin/location/'+lid;
+     }
+     function clickcontent(cid)
+     {
+        window.location.href = '/admin/content/'+cid;
+     }
+
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+ {% block middle %}
+ <div id="middle" >
+   <div id="bookmarks" >
+ 
+     <div class="heading">
+      <div class="label" > <a href ="/admin/bookmark/edit" >{{'.bookmarks'|trans }}</a></div> 
+     </div>
+     {% if blists is defined %}
+     {% for key1, blist in blists  %}
+         <div class="bookmark{{key1}}"> {{key1}}</div>
+         {% for key in blist | keys  %} 
+            {% if   blist[key]['fullname'] is defined %}
+               <div class="bookmarkdelete" >
+                   <a href="" onclick="click{{key1}}({key}}" >{{blist[key]['fullname'] }}</a>
+               </div>
+            {% else %}
+               <div class="bookmark{{key1}}" >
+                   <button onclick="click{{key1}}({{blist[key]['id']}},'{{blist[key]['label'] }}');">
+                        {{blist[key]['label'] }}
+                   </button>
+               </div>
+            {% endif %}
+         {% endfor %}
+     {% endfor %}
+     {% endif %}
+    </div>
+    </div>
+{% endblock %}

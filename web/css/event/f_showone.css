@@ -1,0 +1,215 @@
+
+
+xdiv#event div.breadcrumbs
+{
+color:red;
+font-size : 1em;
+}
+
+xdiv#event div.breadcrumbs  a
+{
+  color:blue;
+  text-decoration:none;
+}
+
+div#event div.actionlist 
+{
+ display:flex;
+ flex-wrap:wrap;
+}
+
+div#event div.actionlist div.event
+{
+width: 12em;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+div#event a
+{
+  color:blue;
+  text-decoration:none;
+}
+
+div#event div.heading 
+{
+  
+ display:flex;
+}
+
+xdiv#event div.subheading
+{
+     display:flex;
+    
+}
+
+xdiv#event div.subheading div.label
+{
+    color:yellow;
+    
+}
+
+
+div#event div.dates 
+{
+    color:white;
+    font-size:1.0em;
+    margin-left:5em;
+    margin-top:10px;
+}
+
+div#event div.location 
+{
+  
+  padding-top : 10px;
+}
+
+div#event div.location a
+{
+  
+  color:blue;
+  text-decoration:none;
+}
+
+div#event  div.text
+{
+       color:black;
+       font-size : 1.0em; 
+       margin-left : 2em;
+}
+
+
+div#event div.participants
+{
+  display: flex; /* or inline-flex */
+  flex-direction: row ;
+  flex-wrap: wrap ;
+  justify-content:  space-evenly;
+  align-items: center ;
+  
+}
+
+div#event div.participant 
+{
+  width: 200px;  
+  margin: auto;  
+  padding-top : 0.1em;
+}
+
+div#event div.participant span
+{
+ color: #09798c;
+}
+
+
+
+div#event div.image
+{
+    /*! max-width: 138px; */
+    /*flex-grow: 1;*/
+}
+
+div#event div.imagegroup
+{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+}
+
+div#event div.image img
+{
+    margin:10px;
+    max-width:150px;
+    max-height:150px;
+}
+
+div#event div.image div.imagelabel
+{
+    
+    max-width:150px;
+    color:blue;
+    font-size:0.75em;
+}
+
+div#event div#pdiv
+{
+    margin-bottom: 1em;
+}
+
+ div#event div#cdiv
+ {
+       margin-bottom: 1.5em;
+ }
+
+div#event  div.children
+{
+    margin-left:2em;
+    xmargin-top:5px;
+}
+
+div#event div.children div span.dates
+{
+    color:white;
+    font-size:0.8em;
+}
+
+div#event div.children div 
+{
+    
+    margin-left :0em;
+}
+
+
+xdiv#event div.children div a 
+{
+    color:blue;
+    font-size:1.0em;
+    text-decoration:none;
+}
+
+
+@media  only screen and (max-width: 538px) 
+{
+
+  
+
+
+div#event div.imagelabel
+{
+    font-size : 0.8em;
+}
+
+div#event div.text
+{
+   margin-left: 1em;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+
+div#event div.text p
+{
+    margin-top: 0.1em;
+    margin-bottom : 0.1em;
+}
+
+
+
+div#event  div.children
+{
+    margin-left:1em;
+    xmargin-top:5px;
+}
+
+div#event div.children div 
+{
+    margin-left: 0em;
+    padding-top: 0.1em;
+
+
+
+}
+

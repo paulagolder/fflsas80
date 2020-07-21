@@ -1,0 +1,42 @@
+{# views/registration/done.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+{% set ulocale = user.locale %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/registration/regack.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id="userack" >
+<div class="heading">
+<div class="label" >{{heading|trans({}, "messages", ulocale)}}</div>
+</div>
+<div class="subheading">
+<div class="label" >{{'.username'|trans({}, "messages", ulocale) }}:</div>
+<div class="title">{{user.username}}</div>
+</div>
+<div class="subheading">
+<div class="label" >{{'.email'|trans({}, "messages", ulocale)}}:</div>
+<div class="title">{{user.email}}</div>
+</div>
+{% if messages is iterable %}
+    {% for message in messages %}
+<div class="message">
+{{ message |trans({}, "messages", ulocale)  }}
+</div>
+  {% endfor %}
+  {% else %}
+  {{ messages |trans({}, "messages", ulocale)  }}
+  {% endif %}
+</div>
+</div>
+{% endblock %}
+
+

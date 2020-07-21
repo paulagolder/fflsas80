@@ -1,0 +1,21 @@
+{# views/message/template/fr/reg_notice.html.twig #}
+<div class="messageheading"> 
+ <div class="label">Enregistrer</div>
+</div>
+<div class="bodytext">
+  Vous vous êtes inscrit avec succès sur le site FFLSAS.org et vous devez maintenant confirmer votre adresse e-mail.
+</div>
+
+<div class="bodytext">  
+  Cliquez sur le lien suivant.
+</div>
+<div class="link">
+   <a href= "{{baseurl}}remoteconfirmemail/{{user.userid}}/{{user.registrationcode}}" >Enregistrer</a>
+</div>
+<div class="bodytext">
+ Ou visitez le site et entrez le <{{user.registrationcode}}> à la demande.
+</div>
+<div class= "bodytext">
+  Votre demande sera ensuite transmise à un administrateur pour approbation. Vous recevrez un courrier électronique lorsque l'approbation aura été accordée.
+</div>
+

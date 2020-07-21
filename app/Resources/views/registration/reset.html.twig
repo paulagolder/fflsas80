@@ -1,0 +1,38 @@
+{# views/registration/reset.html.twig #}
+
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/form.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+
+<script src="https://www.google.com/recaptcha/api.js?hl={{lang}}&amp;render=onload" type="text/javascript"></script>
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id="registrationform" >
+{% if message %}
+<div class="heading">
+<div class="label red" >{{ message|trans}}</div>
+</div>
+{% endif %}
+<div class=heading>
+<div class="label" >{{'request.new.password'|trans}}</div>
+</div>
+<div class="form">
+  {{ form_start(form) }}
+ 
+    {{ form_row(form.email) }}
+
+     <div class="g-recaptcha" data-sitekey ="{{ recaptcha_key }}"></div>
+              
+   <button type="submit">{{'.submit'|trans}}!</button>
+    {{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}

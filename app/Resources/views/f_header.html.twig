@@ -1,0 +1,87 @@
+{% block stylesheets %}
+  
+{% endblock %}
+{% block myheader %}
+    <div class='header' id='header' >      
+        <div class="headerbody">
+        <div class="logos">
+                <div class="logo1">
+                    <img src="{{ asset('common/lorraineflag.gif') }}"   border="0" />
+                </div>
+                      <div class="logo2">
+                    <img src="{{ asset('common/wings_tr.png') }}" alt=""  border="0" />
+                </div>
+                </div>
+                <div class="texts" >
+                    <div class="headertext1"> Parachutistes S.A.S de la France Libre 1940 - 1945</div>
+                    <div class="headertext2"> Special Air Service 1st SAS - 3rd SAS - 4th SAS </div>
+                    <div class="headertext3"> Chasseurs Parachutistes 1ère CCP - 2ème RCP - 3ème RCP </div>
+                    <div class="headertext4"> 1944-La liberté tombée du ciel-2019</div>
+                </div>
+          
+         
+          </div>  
+                 
+               
+           
+       
+        <div class="messagebar" >
+            {% set locale =  app.request.getLocale() %}
+            {% set cpath = app.request.uri %}
+            {% if 'en' in ( locale | lower ) %}
+            {% set cpath  = (cpath | replace({'/en/' :'/fr/'}) ) %}
+            <div class="languagelink tooltip"><a href={{cpath}}  ><img src="{{asset('common/fr.gif')}}"/></a>
+                <span class="tooltiptext">{{'.infrench'|trans }}</span>
+            </div>
+            {% else %}
+            {% set cpath  = (cpath | replace({'/fr/' :'/en/'}) ) %}
+            {% set cpath  = (cpath | replace({'/FR/' :'/en/'}) ) %}
+            <div class="languagelink tooltip"><a href ={{cpath}} ><img src="{{asset('common/en.gif')}}" /></a>
+                <span class="tooltiptext">{{'.inenglish'|trans }}</span>
+            </div>
+            {% endif %}
+          
+            <div class="welcome">
+                {% if app.user  is null %}
+                {{'welcome.guest'|trans }}
+                {% else %}
+                {{'.welcome'|trans }} {{ app.user.username }}
+                  {% if  is_granted('ROLE_AADA') %}
+            
+             ({{"awaiting.approval"|trans}})
+            
+            {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}(Administrator)
+                {% elseif is_granted('ROLE_USER') %} ({{'friend'|trans }}) {% endif %} 
+                {% endif %}
+            </div>
+            <div class="status">
+                {{versionname}}
+            </div>
+            <div class="filler"></div>
+            {% if is_granted('ROLE_AEMC')  %}
+            <div class="complete messbutton">
+                <a href="/{{locale}}/confirmemail/{{app.user.userid}}" >{{"complete.reg"|trans}}</a>
+            </div>
+            {% endif %}
+             {% if  is_granted('ROLE_zAPWC') %}
+            <div class="complete messbutton">
+                <a href="/{{locale}}/changepassword/{{app.user.userid}}" >{{"reset.password"|trans}}</a>
+            </div>
+            {% endif %}
+           
+            {% if app.user  is null%}
+            <div class="loginlink messbutton">
+                <a href="/{{locale}}/login" >{{ "log.in"|trans}}</a>
+            </div>
+            {% else %}
+            <div class="logoutlink messbutton">
+                <a href="/logout"  >{{ "log.out"|trans}}</a>
+            </div>                
+            {% endif %}
+            <div class="contactlink messbutton">
+                <a href="/{{locale}}/mailto" >{{ "mail.us"|trans}}</a>
+            </div>
+        </div>
+      </div> 
+ {% endblock %}

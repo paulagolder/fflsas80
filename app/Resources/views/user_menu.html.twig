@@ -1,0 +1,18 @@
+
+{% set locale =  app.request.getLocale() | lower %}
+<div id="mainmenu"  class="mainmenu" >
+ <div class="menuitem" > <a  href="/{{locale}}/menucontent/201"> {{'.introduction'|trans }}</a></div>
+  <div class="menuitem" > <a  href="/{{locale}}/menucontent/200"> {{'our.site'|trans}}</a></div>
+
+{% if is_granted('ROLE_USER') %}
+ <div class="menuitem" > <a  href="/{{locale}}/person/all"> {{'the.men'|trans}}</a></div>
+ <div class="menuitem" > <a href="/{{locale}}/event/top"> {{'the.events'|trans}}</a> </div>
+   <div class="menuitem" > <a href="/{{locale}}/url/show"> {{'see.links'|trans}}</a> </div>
+   <div class="menuitem" > <a href="/{{locale}}/biblo/show/all"> {{'see.books'|trans}}</a> </div>
+   <div class="menuitem" > <a href="/{{locale}}/search/all"> {{'search.site'|trans}}</a> </div>
+   <div class="menuitem" > <a href="/{{locale}}/user/{{ app.user.userid }}"> {{'user.show'|trans}}</a> </div>
+ {% else %}
+   <div class="menuitem" > <a  href="/{{locale}}/person/showroh"> {{'the.men'|trans}}</a></div>
+    <div class="menuitem" > <a  href="/{{locale}}/event/showactions"> {{'the.events'|trans}}</a></div>
+{% endif %}
+</div>

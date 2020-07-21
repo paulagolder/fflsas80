@@ -1,0 +1,550 @@
+*
+{
+  box-sizing:border-box;
+  font-family:"helvetica neue", helvetica, arial, sans-serif;
+}
+
+.button
+{
+  -webkit-box-shadow:inset 0 0 1px 1px #f6f6f6;
+  background:#e3e3e3;
+  border:1px solid #bbb;
+  border-radius:3px;
+  box-shadow:inset 0 0 1px 1px #f6f6f6;
+  color:#333;
+  font:bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding:8px 0 9px;
+  text-align:center;
+  text-shadow:0 1px 0 #fff;
+  width:150px;
+}
+
+.button1
+{
+  margin-left:auto;
+}
+
+.button:hover
+{
+  -webkit-box-shadow:inset 0 0 1px 1px #eaeaea;
+  background:#d9d9d9;
+  box-shadow:inset 0 0 1px 1px #eaeaea;
+  color:#222;
+  cursor:pointer;
+}
+
+.resizable
+{
+  overflow:auto;
+  resize:both;
+}
+
+.tooltip
+{
+  color:red;
+  display:inline-block;
+  padding-right:1em;
+  position:relative;
+}
+
+.tooltip .tooltiptext
+{
+  background-color:#FFF;
+  border-radius:6px;
+  color:red;
+  padding:5px 0;
+  position:absolute;
+  text-align:center;
+  visibility:hidden;
+  width:400px;
+  z-index:1;
+}
+
+.tooltip:hover .tooltiptext
+{
+  visibility:visible;
+}
+
+body
+{
+  background-color:#92a4c5;
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  font-family:HelveticaNeueLight, HelveticaNeue-Light, "Helvetica Neue Light", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+  font-size:12pt;
+  font-stretch:normal;
+  font-weight:300;
+  margin:0;
+  padding:0;
+  background-image:url(/common/skybig.jpg);
+}
+
+div#left
+{
+  background:rgba(0,0,0,0.05);
+  order:1;
+  padding:10px;
+  width:200px;
+}
+
+div#middle
+{
+  background:rgba(0,0,0,0.025);
+  xbackground-color:red;
+  flex:1;
+  order:2;
+  padding:20px;
+}
+
+div#middle a,a:visited,a:link
+{
+  color:blue;
+  text-decoration:none;
+}
+
+div#middle a.deletebutton,div#middle div.deletebutton a
+{
+  background:red;
+  border:0;
+  border-radius:4px;
+  box-sizing:content-box;
+  color:#FFF;
+  display:inline;
+  font-size:12px;
+  height:auto;
+  line-height:15px;
+  margin:0 10px;
+  padding:4px;
+  text-decoration:none;
+  width:auto;
+}
+
+div#middle a.editbutton,a.editbutton:visited,a.editbutton:link,a.editbutton:visited,div#middle div.hidebar button
+{
+  color:#FFF;
+}
+
+div#middle a.editbutton:hover
+{
+  color:blue;
+}
+
+div#middle a:hover
+{
+  color:#FFF;
+  text-decoration:none;
+}
+
+div#middle div#search.search div.pageheading
+div.plus90
+{
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+}
+
+div#middle div.datatable
+{
+  padding-top: 20px;
+}
+
+div#middle div.datarow
+{
+  display:flex;
+  font-size:1em;
+}
+
+div#middle div.datarow div.data
+{
+  color:blue;
+}
+
+div#middle div.datarow div.label
+{
+  color:#FF0;
+
+}
+
+div#middle div.editbutton a
+{
+  background:green;
+  border:0;
+  border-radius:4px;
+  box-sizing:content-box;
+  color:#FFF;
+  display:inline;
+  font-size:12px;
+  height:auto;
+  line-height:15px;
+  margin:0 10px;
+  padding:4px;
+  text-decoration:none;
+  width:auto;
+}
+
+
+div#middle div.text
+{
+    margin-left: 5em;
+    font-size: 1.0em;
+    margin-top: 20px;
+}
+
+div#middle div.text p
+{
+    margin-top:5px;
+    margin-bottom : 5px;
+}
+
+
+
+div#middle ul
+{
+    padding-left: 2em;
+}
+
+div#middle div.imagelabel
+{
+    font-size : 1em;
+}
+
+div#middle div.heading div.label
+{
+  color:#FF0;
+  font-size:1.25em;
+  margin-right:1em;
+}
+
+ div#middle div.heading div.label.red
+ {
+    color:red; 
+       font-size:1.25em;
+  margin-right:1em;
+ }
+
+div#middle div.heading div.title
+{
+  color:maroon;
+  font-size:1.25em;
+  margin-right:1em;
+}
+
+div#middle div.heading
+{
+  align-items:center;
+  display:flex;
+  margin-bottom:1em;
+}
+
+div#middle div.subheading
+{
+  align-items:center;
+  display:flex;
+  margin-bottom:0.5em;
+}
+
+div#middle div.refs div.longlinklist div.label
+{
+  color:#FF0;
+  margin-top:20px;
+
+}
+
+div#middle div.refs div.longlinklist div.list
+{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+div#middle div.refs div.longlinklist div.list div
+{
+  margin-bottom:.5em;
+  margin-left:1em;
+  overflow:hidden;
+  width:10em;
+}
+
+div#middle div.refs,div#middle div.refs div.linklist,div#middle div.refs div.longlinklist
+{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+div#middle div.returnbutton a
+{
+  background:#FFF;
+  border:0;
+  border-radius:7px;
+  box-sizing:content-box;
+  color:#000;
+  display:inline;
+  font-size:12px;
+  height:auto;
+  line-height:15px;
+  margin:0 10px;
+  padding:4px;
+  text-decoration:none;
+  width:auto;
+}
+
+div#middle div.row
+{
+  display:flex;
+}
+
+div#middle div.row.selectable:hover 
+{
+	background: rgba(80, 0, 0, 0.1);
+}
+
+div#middle div.row:nth-child(2n+2) 
+{
+	background: rgba(0,0,80,0.05);
+}
+
+
+
+div#middle div.subheading div.label
+{
+  color:#FF0;
+  font-size:1em;
+  margin-right:1em;
+}
+
+div#middle div.subheading div.label.red
+{
+    color:red;
+}
+
+
+
+div#middle div.subheading div.title
+{
+  color:maroon;
+  font-size:1em;
+  margin-right:1em;
+}
+
+div#middle div.subsubheading
+{
+  align-items:center;
+  display:flex;
+  margin-top:5px;
+}
+
+div#middle div.subsubheading div.content
+{
+  color:blue;
+  font-size:.8em;
+  margin-right:1em;
+}
+
+div#middle div.subsubheading div.label
+{
+  color:#FF0;
+  font-size:.8em;
+  margin-right:1em;
+}
+
+div#middle div.subsubheading div.title
+{
+  color:maroon;
+  font-size:.8em;
+  margin-right:1em;
+}
+
+div#middle div.datarow
+{
+  align-items:center;
+  display:flex;
+  margin-top:5px;
+}
+
+div#middle div.datarow div.content
+{
+  color:blue;
+  margin-right:1em;
+}
+
+div#middle div.datarow div.label
+{
+  color:#FF0;
+  margin-right:1em;
+}
+
+div#middle div.datarow div.title
+{
+  color:maroon;
+  margin-right:1em;
+}
+
+
+
+div#middle div.list div.selectable:hover {
+    background: rgba(80, 0, 0, 0.1);
+}
+
+div#page
+{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  xbackground:#ccc;
+}
+
+div#page div.header
+{
+  #color:#fff;
+  color:#0f0;
+}
+
+div#page div.middle div.pageheading,div#middle div.pageheading
+{
+  color:maroon;
+  font-size:1.2em;
+}
+
+div#page div.mypage
+{
+  color:#000;
+  flex:1;
+  xdisplay:flex;
+}
+
+div#page div.mypageinner
+{
+  display:flex;
+  flex:1;
+}
+
+div#right
+{
+  background:rgba(0,0,0,0.05);
+  order:3;
+  padding:10px;
+  width:200px;
+}
+
+div#right div.frame
+{
+  background-color:rgba(76,76,76,0.2);
+  border-color:rgba(255,255,255,0.5);
+  border-radius:5px;
+  border-style:double;
+  padding:10px;
+  xmargin:10px;
+  xpadding-top:20px;
+}
+
+div#right div.heading
+{
+  align-content:center;
+  align-items:center;
+  color:#FF0;
+  display:flex;
+  font-size:1.2em;
+}
+
+div#right div.heading div.label,div#right div.subheading div.label
+{
+  color:#FF0;
+}
+
+div#right div.heading div.title,div#right div.subheading div.title
+{
+  color:maroon;
+}
+
+div#right div.subheading
+{
+  align-content:center;
+  display:flex;
+  font-size:.8em;
+  margin-top:10px;
+}
+
+div.hidebar
+{
+  background-color:#506ab6;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  width:100%;
+}
+
+div.hidebar button
+{
+  background-color:#506ab6;
+  border:0 none green;
+  width:100%;
+}
+
+h1
+{
+  color:maroon;
+  margin-left:40px;
+}
+
+div.hline
+{
+   width: 100%;
+   border: 5px solid blue; 
+}
+
+
+
+
+
+
+@media  only screen and (max-width: 538px) 
+{
+ 
+  
+
+
+  div#middle div.heading div.label
+  {
+    font-size:1.0em;
+  }
+  
+  div#page div.mypageinner
+  {
+    display:block;
+    flex:1;
+  }
+  
+  div#right,div#peoplesidebar
+  {
+    display:none;
+  }
+}
+
+@media max-width 750px {
+    
+    
+  div#page div.mypage div.mypageinner div#left
+  {
+    padding:2px;
+    width:100%;
+  }
+  
+  div#middle div.heading div.label
+  {
+    font-size:1.0em;
+  }
+  
+  div#page div.mypageinner
+  {
+    display:block;
+    flex:1;
+  }
+  
+    div#left
+  {
+    display:none;
+  }
+  
+  div#right,div#peoplesidebar
+  {
+    display:none;
+  }
+}

@@ -1,0 +1,32 @@
+{# views/message/contact.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('text/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+  <div id="middle" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if texts is defined %}
+     <h1>{{heading}}</h1> 
+     <nav>
+       <ul>
+         {% for text in texts %}
+          <li><a href="{{text.link}}" >{{ personname}}</a> </li>
+          <div> {{text.language}} : {{text.attribute}} </div>
+          <div > {{text.comment | raw }} </div>
+         {% endfor %}
+      </ul>
+     </nav>
+  {% endif %}
+  </div>
+{% endblock %}

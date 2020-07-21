@@ -1,16 +1,16 @@
 imports:
-    - { resource: parameters.yml }
+    - { resource: parameters_02switch.yml }
     - { resource: security.yml }
     - { resource: services.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
+    httpProtocol: http
 
 framework:
-    #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: [fr] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -35,6 +35,21 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        pathToWeb: "%kernel.project_dir%/web"
+        pdffunction: '%pdf-function%'
+        locationpath: '%location-path%'
+        recaptcha_key: '%recaptcha_key%'
+        recaptcha_secret: '%recaptcha_secret%'
+        maxlistuser: '%maxlistuser%'
+        maxlistadmin: '%maxlistadmin%'
+        versionname: '%version-name%'
+        maxrecentchanges: '%maxrecentchanges%'
+        defaultcontent: '%defaultcontent%'
+        adminstratorsemails: '%administratorsemails%'
+        baseurl: '%base-url%'
+    paths:
+        '%kernel.project_dir%/web': pathToWeb
 
 # Doctrine Configuration
 doctrine:
@@ -45,13 +60,8 @@ doctrine:
         dbname: '%database_name%'
         user: '%database_user%'
         password: '%database_password%'
+   
         charset: UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #path: '%database_path%'
 
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
@@ -60,12 +70,28 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: '%mailer_transport%'
-    host: '%mailer_host%'
-    username: '%mailer_user%'
-    password: '%mailer_password%'
+    #delivery_addresses: ['paul.a.golder@lerot.org']
+    transport:   '%email-transport%'
+    encryption:  '%email-encryption%'
+    auth_mode:   '%email-auth_mode%'
+    host:  '%email-host%'
+    port:  '%email-port%'
+    username:   '%email-username%'
+    password:   '%email-password%'
     spool: { type: memory }
 
-sensio_framework_extra:
-   router:
-        annotations: false
+#
+#fos_ck_editor:
+#    default_config: my_config
+#    configs:
+#        my_config:
+#            toolbar: [ ["Source", "Image", "Styles", "Cleanup" ] ]
+#            uiColor:                "#dddddd"
+#            stylesSet: "default"
+#        styles:
+#            default:
+#              - { name: "Blue Title", element: "h2", styles: { color: "Blue" }}
+#              - { name: "CSS Style", element: "span", attributes: { class: "my_style" }}
+#              - { name: "Widget Style", type: widget, widget: "my_widget", attributes: { class: "my_widget_style" }}
+            # ...
+            

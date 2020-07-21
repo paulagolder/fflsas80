@@ -1,0 +1,11 @@
+ div#regform form div label
+ {
+     color: yellow;
+     font-size: 1em;
+     width: 10em;
+ }
+ 
+div#regform form div
+{
+    display: flex;
+}

@@ -1,0 +1,24 @@
+
+{% block stylesheets %}
+   <link href="{{ asset('css/news/show.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+   {% if newsitems %}
+
+    <div id="latestedits" class="frame">
+       <div class="heading">
+         <div class="label" >{{'latest.news'|trans }}</div> 
+       </div>
+          {% for newsitem in newsitems  %}
+          
+       <div class="newsitem"> 
+        <a href="/{{lang}}/content/{{newsitem.subjectid}}" > {{newsitem.title}} </a>
+      </div>
+      {% endfor %}
+   </div>
+  {% endif %}
+
+    </div>
+{% endblock %}

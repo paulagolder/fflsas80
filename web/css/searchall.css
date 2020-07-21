@@ -1,0 +1,68 @@
+
+
+
+div.search div.searchlist
+{
+    height:400px;
+    width:90%;
+    xmargin-left: 1em;
+    margin-top: 1em;
+    overflow:hidden; 
+    overflow-y:scroll;
+   border: 1px solid yellow;
+}
+
+div.search div.searchlist div div.search a
+ {
+    line-height: 26px;
+    margin-bottom:5px;
+    color:blue;
+    text-decoration:none;
+    margin-bottom:5px;
+ }
+
+div.search div.searchlist div div.search a.editbutton
+{
+    color:white;
+}
+ 
+ div.search div.searchlist div.search.row:hover
+ {
+         background: rgba(80, 0, 0, 0.1);
+ }
+
+ div.search div.searchlist div.search.row.selectable:hover
+ {
+         background: rgba(80, 0, 0, 0.1);
+ }
+ 
+ div.search div.searchlist div div.user.search.row.selectable.red div 
+ {
+     background:red;
+ } 
+ 
+ 
+
+ div.search div.searchlist div.row:nth-child(2n+2)
+{
+  background:rgba(0,0,80,0.05);
+}
+
+
+div.search form div.heading div.label
+{
+  font-size:1.0em;
+  color: yellow;
+}
+
+div.search form
+{
+    margin-top:1em;
+}
+
+div.search form div.row div.label
+{
+    font-size:1.0em; 
+    color: yellow;
+}
+

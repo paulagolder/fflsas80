@@ -1,0 +1,36 @@
+
+
+
+
+
+xdiv#randomimage  div.heading 
+{
+    color:maroon;
+    font-size:1.2em;
+    text-align : center;
+}
+
+xdiv#randomimage  div.heading div.title
+{
+    color:yellow;
+    font-size:1em;
+    text-align : center;
+}
+
+xdiv#randomimage div.image div.title
+{
+    color:maroon;
+    font-size: 1em;
+    text-align: center;
+}
+
+xdiv#randomimage
+{
+	border-style: double;
+	border-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background-color: rgba(76, 76, 76, 0.2);
+	xmargin: 10px;
+	padding: 10px;
+	xpadding-top: 20px;
+}

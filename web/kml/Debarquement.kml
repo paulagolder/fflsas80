@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Invasion Of North Africa</name>
+  <description><![CDATA[]]></description>
+  <Style id="rectstyle1">
+  <LineStyle>
+  <color>FFFF0000</color>
+  <width>2</width>
+  </LineStyle>
+  <PolyStyle>
+  <color>FFFF0000</color>
+  <fill>1</fill>
+  <outline>1</outline>
+  </PolyStyle>
+  </Style>
+  <Style id="linestyle1">
+  <LineStyle>
+  <color>FFFF0000</color>
+  <width>2</width>
+  </LineStyle>
+  </Style>
+  <Placemark>
+    <name>Western Task Force</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#rectstyle1</styleUrl>
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -10.506592,33.815666,0.000000
+            -10.067139,33.468109,0.000000
+            -7.869873,35.029995,0.000000
+            -8.287354,35.424870,0.000000
+            -10.506592,33.815666,0.000000
+          </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Line 2</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -9.254151,32.324276,0.000000
+        -9.781495,33.651207,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 3</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -7.606202,33.578014,0.000000
+        -8.858643,34.325291,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 4</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -6.529541,34.470333,0.000000
+        -8.089600,34.921970,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Center Task Force</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#rectstyle1</styleUrl>
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.717530,36.544949,0.000000
+            -0.025635,36.650791,0.000000
+            -0.025635,36.137875,0.000000
+            -1.651612,36.049099,0.000000
+            -1.717530,36.544949,0.000000
+          </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Line 5</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -1.212159,35.496456,0.000000
+        -1.300049,36.102375,0.000000
+        -1.278077,36.084621,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 6</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -0.552979,35.764343,0.000000
+        -0.794678,36.120129,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 7</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#slinestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        -0.133667,35.826721,0.000000
+        -0.243530,36.137875,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Eastern Task Force</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#rectstyle1</styleUrl>
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <tessellate>1</tessellate>
+          <coordinates>
+            2.316284,37.396347,0.000000
+            3.744507,37.422527,0.000000
+            3.744507,37.107765,0.000000
+            2.283325,37.099003,0.000000
+            2.316284,37.396347,0.000000
+          </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Line 8</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        3.008423,36.756489,0.000000
+        2.975464,37.081474,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 9</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        2.711792,36.659607,0.000000
+        2.645874,37.125286,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Line 10</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#linestyle1</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        3.305053,36.765293,0.000000
+        3.327026,37.142803,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+</Document>
+</kml>

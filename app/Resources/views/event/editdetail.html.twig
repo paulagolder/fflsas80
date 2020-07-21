@@ -1,0 +1,45 @@
+{# views/event/editdetail.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/event/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+  
+     function clicklocation(l)
+     {
+      document.getElementById("event_form_locid").value=l; 
+     }
+   </script>
+{%endblock%}
+
+{% block middle %}
+<div id="middle" >
+<div id="editevent"  >
+<div class="heading">
+ <div class="label" > {{'edit.event'|trans }}</div>
+ <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div>
+<div  class="form" >
+{{ form_start(form) }}
+    {{ form_row(form.label) }}
+    {{ form_row(form.parent) }}
+    {{ form_row(form.locid) }}
+    {{ form_row(form.startdate) }}
+    {{ form_row(form.enddate) }}
+
+    <button type="submit">{{'.submit'|trans}}</button>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}
+
+

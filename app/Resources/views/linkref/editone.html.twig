@@ -1,0 +1,100 @@
+{# views/linkrefs/editone.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/linkref/editone.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+     function clicklocation(lid)
+     {
+      window.location.href = '/admin/event/setlocation/{{objid}}/'+lid;
+     }
+     
+     function clickperson(pid)
+     {
+        window.location.href = '/admin/image/addref/person/'+pid+'/{{objid}}';
+     }
+ </script>
+{% endblock %}
+
+
+
+
+{% block middle %}
+<div id="middle" >
+ <div id="linkref" class="editone">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% else %}
+     <div class ="heading" >
+     <div class="title" >{{heading}}  </div>
+           <div class="returnbutton button1"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+           <div class="editbutton" ><a class="editbutton" href= "/admin/linkref/edit/{{objecttype}}/{{objid}}/{{ref.pathid}} " > {{'.edit'|trans}}</a></div>
+    </div>
+            <div class="ref">
+              <div class= "name" >{{ ref.label}}</div>
+              <div class= "path" >{{ref.path}}</div>
+            </div>
+         
+          
+            
+    <div class="texts" >
+   {%  set frtitle = null %}
+   {%  set entitle = null %}
+   {% if texts is defined %}
+         {% for text in texts %}
+         {% if (text.language == "FR" or text.language == 'fr') and text.attribute=="title" %} 
+           {% set frtitle = true %} 
+           <div class="textref" >
+              <div   class="textref " > {{ ref.label}} : {{text.attribute}}: {{text.language | upper}} :
+              <a class= "editbutton" href="/admin/text/{{text.id}}" >{{'edit.this'|trans }} </a> 
+              </div>
+              <div class="textpanel" > {{text.comment | raw }} </div>
+           </div>
+         {%endif%}
+         {% if text.language == 'EN' or text.language == 'en' %} 
+           {% set entitle = true %} 
+           <div class="textref" >
+             <div   class="textref " > {{ ref.label}} : {{text.attribute}}: {{text.language | upper}} :
+             <a class= "editbutton" href="/admin/text/{{text.id}}" >{{'edit.this'|trans }} </a> 
+             </div>
+             <div class="textpanel" > {{text.comment | raw }} </div>
+           </div>
+         {%endif%}
+         {% endfor %}
+         </div>
+  {% endif %}
+  {% if not frtitle  %}
+  <div   class="subheading selectable" > 
+           <div class="label">{{ ref.label}}: FR : title :</div>
+           <div class="editbutton button1">
+        
+           <a class= "editbutton " href="/admin/text/{{objecttype}}/{{objid}}/new/linkref/{{ref.pathid}}/title/fr" >{{'create.this'|trans }} </a> </div>
+           </div>
+  {% endif %}
+  {% if not entitle  %}
+   <div   class="subheading selectable" > 
+           <div class="label">{{ ref.label}}: EN : title :</div>
+           <div class="editbutton button1">
+           <a class= "editbutton" href="/admin/text/{{objecttype}}/{{objid}}/new/linkref/{{ref.pathid}}/title/en"  >{{'create.this'|trans }} </a> </div>
+           </div>
+  {% endif %}
+ 
+             
+             
+             
+     </div>
+
+  {% endif %}
+  
+ </div> 
+{% endblock %}
+
+
+{% block right %}
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+{% endblock%}

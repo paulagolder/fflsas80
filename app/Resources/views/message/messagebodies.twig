@@ -1,0 +1,33 @@
+
+
+
+
+
+{% macro emailbody1( message ) %}
+
+<div id="mailmessage">
+<h3 class="label">{{'message.enyoyer'|trans }} {{message.toname}}</h3>
+<table  >
+<tr><td >{{'mail.date.sent'|trans}} </td><td> {{ message.date_sent  | date("Y-m-d H:i:s")}}</td></tr>
+<tr><td >{{'mail.sentby'|trans}} </td><td> {{ message.toname }}</td></tr>
+<tr><td> {{'mail.from'|trans }}</td><td>{{message.fromemail}} </td></tr>
+<tr><td>{{'mail.subject'|trans}} </td><td> {{ message.subject }}</td></tr>
+<tr><td>{{'mail.body'|trans}}  </td><td>{{ message.body }}</td></tr>
+</table>
+</div>
+{% endmacro %}
+
+
+{% macro emailbody2( message ) %}
+
+<div id="mailmessage">
+<h3 class="label">{{'message.forwarded.by.admin'|trans }} </h3>
+<table  >
+<tr><td  style="font-weight: bold;" >{{'mail.date.sent'|trans}}</td><td> {{ message.date_sent | date("Y-m-d H:i:s") }}</td></tr>
+<tr><td  style="font-weight: bold;">{{'mail.sentby'|trans}} </td><td> {{ name }} ({{message.fromemail}}) </td></tr>
+<tr><td  style="font-weight: bold;">{{'mail.subject'|trans}} </td><td> {{ message.subject }}</td></tr>
+</table>
+</div>
+<div  style="margin-top:2em;" >{{ message.body }}</div>
+</div>
+{% endmacro %}

@@ -1,0 +1,45 @@
+
+xdiv#contactform div#form
+{
+    font-size :1.5em;
+    color: red;
+    
+    
+}
+
+div#contactform  div.heading
+{
+  font-size: 1em;
+  color: maroon;
+}
+
+div#contactform  label
+{
+  font-size: 1.0em;
+  color: yellow;
+  width: 5em;
+}
+
+div#contactform div#form div 
+{
+    display:flex;
+}
+
+xdiv#contactform div#form div 
+{
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+ div#form div input
+ {
+     
+       margin-left: 50px; 
+ }
+     
+     
+div#form div textarea
+ {
+     
+       margin-left: 50px; 
+ }

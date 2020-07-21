@@ -1,0 +1,40 @@
+{# views/user/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/user/user.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="fuser">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if fusers %}
+     <h1>{{'.users'|trans}} ({{ fusers | length }} )</h1> 
+     <div class="fuserlist">
+   
+         {% for fuser in fusers %}
+           <div class="user">
+            <div>{{fuser.username}} </div>
+             <div class="editbutton button1" > <a class="editbutton" href="/admin/showone/{{fuser.userid}}" >{{"user.show"|trans }} </a> </div>
+             <div class="editbutton " > <a class="editbutton" href="{{fuser.link}}" >{{"view.user"|trans }} </a> </div>
+            <div class="deletebutton" > <a class="deletebutton" href="/admin/user/delete/{{fuser.userid}}" Onclick="return ConfirmDelete()"  >{{"delete.user"|trans }} </a> </div>
+                 </div>
+         {% endfor %}
+
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+
+
+{% block left%}
+ 
+{% endblock %}

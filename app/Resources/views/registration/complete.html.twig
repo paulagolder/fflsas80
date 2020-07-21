@@ -1,0 +1,26 @@
+{# views/registration/complete.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="regcomplete">
+<div class=heading>
+<div class="label" >{{'complete.registration'|trans}}</div>
+</div>
+<div class="form">
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.interet) }}
+    {{ form_row(form.newregistrationcode) }}
+    <button type="submit">{{'.submit'|trans}}!</button>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+
+div#linkrefsedit div.heading
+{
+    display:flex;
+}
+
+div#linkref div.ref div.name
+{
+    font-size : 1em;
+    color:blue;
+}
+
+div#linkref div.ref div.path
+{
+    font-size : 1em;
+    color:blue;
+}
+
+
+div#linkref div.texts div.textref div.textref
+{
+    font-size : 1em;
+    color:yellow;
+     margin-bottom: 0px;
+}
+
+div#linkref div.texts div.textref div.textpanel
+{
+    font-size : 0.8em;
+    color:blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#linkref div.texts
+{
+    margin-top:20px;
+}
+
+

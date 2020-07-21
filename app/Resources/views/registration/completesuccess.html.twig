@@ -1,0 +1,33 @@
+{# views/registration/completesuccess.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+
+<div id="completesuccess">
+<div class="heading">
+  <div class="label"> {{'sucessful.completion'|trans }}</div>
+  <div class="title"> {{ username }}</div>
+  <div class="title"> {{ email }}</div>
+  </div>
+</div>
+
+
+<div class="heading">
+  <div class="label red"> {{'.reconnect'|trans }}</div>
+ 
+  </div>
+</div>
+</div>
+{% endblock %}

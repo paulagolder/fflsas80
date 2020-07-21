@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mission Dunhill</name>
+    <description>Opération en Bretagne du 2nd SAS</description>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Calque sans titre</name>
+      <Placemark>
+        <name>Party I</name>
+        <description>DZ du stick du captain Greville-Bell et 5 hommes parachutés dans la nuit du 2 au 3 août</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -1.795278,47.818068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Party II</name>
+        <description>DZ du stick du Lt Hassells Yates et 13 hommes parachutés dans la nuit du 3 au 4 août</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -1.790299,47.815575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Party III</name>
+        <description>DZ du stick du captain Baillie et 10 hommes parachutés dans la nuit du 3 au 4 août</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -1.234717,47.901383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Party IV</name>
+        <description>DZ du stick du capitaine Lazon et 9 hommes parachutés dans la nuit du 3 au 4 août.</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -1.185,47.857792,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Party V</name>
+        <description><![CDATA[DZ d'une partie du stick du Lt Dimond et 12 hommes parachutés dans la nuit du 5 au 6 août]]></description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.242493,48.007252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Party V</name>
+        <description><![CDATA[DZ d'une autre partie du stick du Lt Dimond et 12 hommes parachutés dans la nuit du 5 au 6 août]]></description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.248072,47.986418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

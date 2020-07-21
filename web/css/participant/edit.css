@@ -1,0 +1,49 @@
+div#editparticipation
+{
+    
+
+}
+
+ div#editparticipation div.heading div.title
+ {
+  font-size:1em;   
+ }
+    
+div#editparticipation > div
+{
+   margin-left: 5em;
+   margin-top:10px;
+   margin-bottom:10px;
+}
+
+div#editparticipation > div > div
+{
+   margin-left: 1em;
+   margin-top:10px;
+   margin-bottom:10px;
+}
+
+
+
+div#editparticipation div.incidents div.incidents div.incidentlist div.incident
+  {
+   display:flex;
+   font-size:1em;   
+   color:blue;
+  }
+  
+div#editparticipation div.incidents div.incidents div.incidentlist div.incident div.button1
+  {
+     margin-left: auto; 
+      
+  }
+  
+  
+div#editparticipation div.incidents div.incidents div.incidentlist div
+{
+     margin-top: 5px;
+     margin-left:2em;
+}
+
+
+

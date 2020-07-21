@@ -1,0 +1,87 @@
+
+
+div#location  div.breadcrumbs
+{
+color:red;
+font-size : 1em;
+}
+
+
+
+
+
+ div#location div.heading div.heading
+{
+    
+    margin-left:1em;
+}
+
+
+ div#location div.latlong
+{
+    color:white;
+    margin-left:2em;
+    font-size:0.75em;
+}
+
+
+div#location  div.text
+{
+    color:pink;
+    font-size : 1.0em; 
+}
+
+
+div#location div a
+{
+      margin-top:20px;
+      color:blue;
+     text-decoration:none;
+}
+
+div#location div.childrenandrefs
+{
+    margin-top:30px;
+    color:yellow;
+}  
+
+div#location div.children div
+{
+    
+      color:blue;
+      font-size : 1.em; 
+      display: list-item;          /* This has to be "list-item"                                               */
+      list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+      list-style-position: inside;
+}
+
+div#location > div
+{
+    margin-top:30px;
+}
+
+div#location div.children a
+{
+      margin-top:20px;
+      color:blue;
+      text-decoration:none;
+}
+
+div#location  div.links div.label
+{
+    color:yellow;
+}
+
+
+div#location   div.links div.link
+{
+    margin-left:20px;
+}
+
+
+
+#mapid 
+{ 
+    height: 400px;  
+    max-width : 600px;
+}

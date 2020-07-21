@@ -1,24 +1,92 @@
-# To get started with security, check out the documentation:
-# https://symfony.com/doc/current/security.html
 security:
+    access_denied_url: /login
+    role_hierarchy:
+        ROLE_ADMIN:      ROLE_USER
+        ROLE_CHEF:       ROLE_ADMIN
+        #ROLE_PWCH:       ROLE_USER
+    
+        #ROLE_TEMP  initial status
+        #ROLE_APWC  awaiting password change
+        #ROLE_AEMC  awaiting email confirmation
+        #ROLE_AADA  awaiting administrator approval
+        #ROLE_DELL  refected 
+         
+         
+    encoders:
+      #Symfony\Component\Security\Core\User\User:
+         AppBundle\Entity\User:  
+            algorithm: bcrypt
+      
 
-    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
-
+          
+        our_db_provider:
+            entity:
+                class: AppBundle\Entity\User
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+        
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js|newimages|common)/
             security: false
-
         main:
-            anonymous: ~
-            # activate different ways to authenticate
+             pattern:    ^/
+             anonymous: ~
+            # http_basic: ~
+             provider: our_db_provider
+             ##access_denied_handler: AppBundle\Security\AccessDeniedHandler
+             logout_on_user_change: true 
+             form_login: 
+               login_path: login
+               check_path: login
+               default_target_path: /201/fr
+               #default_target_path: /fr/person/all
+    #            always_use_default_target_path: 1
+        #secured_area:
+            # ...
+             logout:
+                path:   /logout
+                target: /201/fr
+                #target: /fr/person/all                    
+ 
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/web/newimages, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/logout, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/xxremotecompleteregistration, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/xxreregister, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/deregister, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/remotederegister, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/remotechangepassword, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/accueil, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/register, roles:  IS_AUTHENTICATED_ANONYMOUSLY } 
+         - { path: ^/(fr|en|FR|EN)/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/accueil, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/changepassword, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/resetpassword, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/confirmemail, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/complete, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/(fr|en|FR|EN)/menucontent/, roles:  IS_AUTHENTICATED_ANONYMOUSLY} 
+         - { path: ^/(fr|en|FR|EN)/content, roles: IS_AUTHENTICATED_ANONYMOUSLY }    
+         - { path: ^/(fr|en|FR|EN)/mailto, roles: IS_AUTHENTICATED_ANONYMOUSLY }    
+         - { path: ^/(fr|en|FR|EN)/person/showroh, roles: IS_AUTHENTICATED_ANONYMOUSLY }  
+         - { path: ^/(fr|en|FR|EN)/event/showactions, roles: IS_AUTHENTICATED_ANONYMOUSLY }  
+         - { path: ^/(fr|en|FR|EN)/, roles: ROLE_USER }      
 
-            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-            #http_basic: ~
+         - { path: ^/(fr|en|FR|EN), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         
+         - { path: ^/(fr|en|FR|EN)/image, roles: ROLE_USER }  
+         - { path: ^/(fr|en|FR|EN)/incident/, roles:  roles: ROLE_USER} 
+         - { path: ^/(fr|en|FR|EN)/search, roles: ROLE_USER }
 
-            # https://symfony.com/doc/current/security/form_login_setup.html
-            #form_login: ~
+   
+         - { path: ^/admin/bookmark/edit, roles:  IS_AUTHENTICATED_ANONYMOUSLY } 
+         - { path: ^/admin/bookmark/delete, roles:  IS_AUTHENTICATED_ANONYMOUSLY } 
+         - { path: ^/admin/, roles: ROLE_ADMIN  }
+         - { path: ^/, roles:  IS_AUTHENTICATED_ANONYMOUSLY } 
+         - { path: ^/, roles: ROLE_ADMIN  }
+        

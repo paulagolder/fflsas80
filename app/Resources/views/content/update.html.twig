@@ -1,0 +1,55 @@
+{# views/text/update.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/content/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block js %}
+ {{ parent() }}
+ <script>
+    
+    
+     
+   </script>
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id="contentedit" >
+
+<div class="heading">
+ <div class="label" >{{'edit.contents'|trans }} </div>
+  <div class="title" >{{ label}} : {{contentid}} </div>
+  <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div> 
+{{ form_start(form) }}
+
+ {{  form_row(form.subjectid) }}
+
+  {{ form_row(form.language) }}
+    {{ form_row(form.title,{ 'attr': {'cols': '50'} }) }}
+    <div id="maintext">
+{{ form_row(form.text,{ 'attr': {'cols': '50'} }) }}
+    </div>
+    <button type="submit">{{'.submit'|trans }} </button>
+{{ form_end(form) }}
+
+{% for  imagelink in imagelinks %}
+{% for  key , sublink in imagelink %}
+<div class="sub;link" >
+<div> {{ sublink }} </div>
+<div class="editbutton"> <a href = "/admin/content/deleteimage/{{cid}}/{{key}}" >{{'.delete'|trans }} </a> </di 
+{% endfor %}
+{% endfor %}
+</div>
+</div>
+{% endblock %}
+
+
+

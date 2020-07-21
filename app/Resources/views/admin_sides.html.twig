@@ -1,0 +1,28 @@
+{# views/admin_sides.html.twig #}
+
+{# a editer pour le administateur du site  #}
+
+
+
+
+ 
+  
+   {% block left %}
+       <div id="left" >
+      {% include 'user_menu.html.twig' %}
+      {% include 'admin_menu.html.twig' %}
+     </div>
+    {% endblock %}
+   
+
+    {% block right %}
+    <div id="right" >
+      {% if is_granted('ROLE_USER') %}
+        {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+      {% endif %}
+      {{ render(controller('AppBundle\\Controller\\RecentEditsController::recentedits')) }}
+        </div>
+    {% endblock %}
+  
+
+

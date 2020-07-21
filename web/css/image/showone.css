@@ -1,0 +1,88 @@
+
+
+
+
+
+
+div#image div.path
+{
+font-size: 0.8em;
+color: silver;
+}
+
+
+div#image div.content
+{
+     display: flex;
+     flex-direction: row;
+     margin-top:20px;
+}
+
+div#image div.image
+{
+   flex-grow: 2;
+   flex-shrink: 9;
+   flex-basis: 25em;
+}
+
+div#image div.refs
+{
+   xflex-grow: 1;
+   xflex-shrink: 1;
+   xflex-basis: 0em;
+   padding-left: 10px;
+}
+
+div#image img
+{
+    width: 100%;
+    max-width: 400px;
+    xmax-height: 500px;
+    xdisplay: block;
+    height: auto;
+}
+
+
+
+div#image div.content div.image div.text
+{
+    margin-top: 20px;
+    font-size:1em;
+    color: blue;
+      max-width: 400px;
+      text-align: center;
+}
+
+xdiv#image div.content div.refs div.ref a
+{
+    color:blue;
+    text-decoration:none;
+    
+}
+
+div#image div.linksheading
+{
+    font-size:1.5em;
+    color:yellow;
+    
+}
+
+
+
+div#image div.content div.refs div.linkgroup{}
+div#image div.linkgroup
+{
+    font-size:1em;
+    font-style:italic;
+    color:yellow;
+    
+}
+
+div#image div.ref
+{
+    font-size:1em;
+    color:white;
+    padding-left:1em;
+}
+
+

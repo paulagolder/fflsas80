@@ -1,0 +1,57 @@
+{# views/content/nonefound.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+<link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+{{ parent() }}
+
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="content" >
+{% if message %}
+    <h1> {{message}}</h1>
+{% endif %}
+
+{% if content %}
+    <div class="heading" >
+       <div class="title">{{content.title}}</div> 
+          {% if is_granted('ROLE_USER') %} 
+        <div  class="editbutton button1 ">
+            <a class="editbutton" href = "/{{lang}}/content/addbookmark/{{content.subjectid}}" >{{'bookmark.content'|trans}}</a>
+        </div>
+        {% endif %}
+         {% if is_granted('ROLE_ADMIN') %} 
+        <div  class="editbutton">
+            <a class="editbutton button1" href = "/admin/content/{{content.subjectid}}" >{{'edit.content'|trans }}</a>
+        </div>
+         {% endif %}
+       
+    </div>
+    
+    <div class='maintext'>
+        {{ content.text | raw}} 
+    </div>
+
+    <div class="refs">
+      {% if refs != null and (refs| length)>0 %}
+       <div  class="linksheading" >{{'links.to'|trans }}</div>
+       {% for obtype , oref in refs %}
+          <div class="linkgroup" >{{obtype|trans}}</div>
+          {% for obid , ref in oref %}       
+            <div class="ref" > <a href="{{ ref.link }}">{{ref.label}}</a> </div>
+          {% endfor %}
+       {% endfor %}
+       {% endif %}
+    </div>
+{% endif %}
+</div>
+</div>
+{% endblock %}
+

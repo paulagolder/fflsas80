@@ -1,0 +1,87 @@
+{# views/user/usersearch.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/searchall.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+  
+     function clickcontent(cid)
+     {
+        window.location.href = '/admin/message/bulk/'+cid;
+     }
+   
+     
+   </script>
+{% endblock %}
+{% block middle %}
+<div id="middle" >
+  <div id="user" class="search" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+    <div class="heading">
+      <div class="label"> {{ heading|trans }}</div>
+      <div class="editbutton button1"><a class="editbutton" href ="/admin/user/new">{{'new.user'|trans}}</a></div>
+   </div>
+    {% if adapusers  %}
+       <div class="subheading">
+     <div class="label">{{'users.for.approval'|trans}}</div> 
+      </div>
+      <div class="approvallist" >
+       <div >
+         {% for user in adapusers  %}
+             <div class="user search row selectable" >
+             <div><a href="{{user.link}}" >{{user.username}}({{user.email}})</a> </div>
+             <div class="editbutton button1" ><a class="editbutton" href="/admin/user/{{user.userid}}">{{'see.user'|trans}}</a></div>
+            </div>
+         {% endfor %}
+      </div>
+     </div>
+   {% endif %}
+   
+   
+  <form  action="/admin/user/search">
+  <div class="heading">
+   <div class="label"> {{'enter.search'|trans }}</div>
+   <input type="text" name="searchfield" value="{{searchfield}}">
+   <input type="submit" value="{{'.search'|trans }}" >
+    <div class="editbutton"><a href="/admin/user/search/*">{{'.reset'|trans}}</a></div>
+   </div>
+   </form>
+   {% if users is defined %}
+     <div class="subheading">
+     <div class="label">{{subheading|trans}}</div> 
+     <div class="title">{{searchfield}}</div> 
+     
+     <div class="editbutton button1 tooltip"> <div class="editbutton">{{'bulk.message'|trans}} </div> <span class="tooltiptext">{{'to.send.bulk.email.use.bookmarks'|trans }}</span>
+              </div>
+     <div class="editbutton "><a class="editbutton" href ="/admin/user/bulkrereg">{{'rereg.group'|trans}}</a></div>
+     </div>
+     <div class="searchlist" >
+       <div >
+         {% for user in users  %}
+          {% if user.membership =="" %}
+           <div class="user search row selectable red" >
+           {% else %}
+             <div class="user search row selectable " >
+           {% endif %}
+             <div><a href="{{user.link}}" >{{user.username}}({{user.email}})</a> </div>
+             <div class="editbutton button1" ><a class="editbutton" href="/admin/user/{{user.userid}}">{{'see.user'|trans}}</a></div>
+            </div>
+         {% endfor %}
+      </div>
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+
+{% block right %}
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+{% endblock%}

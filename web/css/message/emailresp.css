@@ -1,0 +1,19 @@
+
+div#messageresp 
+{
+    border-style :solid;
+    border-color: blue;
+    border-width:2;
+}
+
+
+
+
+
+div#messageresp   label
+{
+  font-size: 1.0em;
+  color: yellow;
+  width: 5em;
+}
+

@@ -1,0 +1,216 @@
+
+div#pdf_person  div.heading div.title {
+
+    color: maroon;
+    font-size: 2.0em;
+    margin-right: 1em;
+ }
+ 
+ 
+ div#pdf_person a, a:visited, a:link {
+
+    text-decoration: none;
+    color: blue;
+}
+
+
+div#pdf_person div.pageheading
+
+{
+    display:flex;
+    xalign-items: center;
+}
+
+
+
+
+
+
+div#pdf_person > div
+
+{
+    xmargin-left: 5em;
+    margin-top: 20px;
+}
+
+
+
+
+
+div#pdf_person div.text
+
+{
+    margin-left: 5em;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+
+
+div#pdf_person div.text p
+{
+    margin-top:1px;
+    margin-bottom : 1px;
+    color:green;
+    border: 0 none red;
+
+}
+
+
+
+
+
+xdiv#pdf_person div.eventtree ul li a
+{
+    text-decoration:none;
+}
+
+div#pdf_person div.eventtree ul li div.incident
+{
+    margin-left: 1em;
+}
+
+
+div#pdf_person div.eventtree ul li div.incident > a
+{
+    color: white;
+}
+
+
+div#pdf_person div.eventtree ul li div.incident > a:hover
+{
+    color: blue;
+}
+
+div.image
+{
+    max-width: 138px;
+    flex-grow: 1;
+    
+    
+}
+
+div#pdf_person div.imagegroup
+{
+    display: table;
+    xflex-direction: row;
+   xflex-wrap: wrap;
+    xjustify-content: space-evenly;
+    border: 0px solid red;
+    width : 100%;
+}
+
+
+div#pdf_person div.imagegroup div.imagerow 
+{
+   display:table-row;
+   
+}
+
+div#pdf_person div.imagegroup div.image 
+{
+   display:table-cell;
+   
+}
+
+
+div#pdf_person div.imagegroup div.image img
+{
+    margin:10px;
+    max-width:150px;
+    max-height:150px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+div#pdf_person div.imagegroup div.imagelabel
+{
+    text-align: center;
+    vertical-align: middle;
+    color:blue;
+    font-size:1em;
+}
+
+
+
+
+
+div#pdf_person div.eventtree
+{
+    font-size : 1em;
+    margin-left: 2em;
+    color : black;
+    margin-top:40px;
+}
+
+
+div#pdf_person div.eventtree ul li div.incident > a 
+{
+
+    color: red;
+
+}
+
+
+
+div#pdf_person a, a:visited, a:link {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+            /** 
+                Set the margins of the page to 0, so the footer and the header
+                can be of the full height and width !
+             **/
+            @page {
+                margin: 0cm 0cm;
+            }
+
+            /** Define now the real margins of every page in the PDF **/
+            body {
+                margin-top: 2cm;
+                margin-left: 2cm;
+                margin-right: 2cm;
+                margin-bottom: 2cm;
+            }
+
+            /** Define the header rules **/
+            header {
+                position: fixed;
+                top: 0cm;
+                left: 0cm;
+                right: 0cm;
+                height: 2cm;
+
+                /** Extra personal styles **/
+                background-color: #03a9f4;
+                color: white;
+                text-align: center;
+                line-height: 1.5cm;
+            }
+            
+            
+
+            /** Define the footer rules **/
+            footer {
+                position: fixed; 
+                bottom: 0cm; 
+                left: 0cm; 
+                right: 0cm;
+                height: 2cm;
+
+                /** Extra personal styles **/
+                background-color: #03a9f4;
+                color: white;
+                text-align: center;
+                line-height: 1.5cm;
+            }
+     
+            footer .page-number:after { content: counter(page); }
+

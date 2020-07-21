@@ -1,0 +1,54 @@
+{# views/text/editdetail.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/text/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="admintexts" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+     <div class ="heading" >
+        <div class="label" > {{'edit.texts'|trans}}      </div>
+        <div class="label" > {{'.for'|trans}}      </div>
+        <div class="label" > {{objecttype|trans}} :     </div>
+        <div class="title" > {{label}}  </div>
+        <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div></div>
+     </div>
+     <div id="textedit" >
+      {% for lang in ['FR','EN'] %}
+         {% for attribute in attributes %}
+       
+              {% if texts[attribute][lang] is defined   %} 
+               <div   class="heading" >
+               <div class="label" >{{attribute}} : {{lang}}</div>
+               <div class ="editbutton button1">
+                <a class= "editbutton" href="/admin/text/{{texts[attribute][lang]['id']}}" >{{'edit.this'|trans }} </a> 
+                </div>
+                <div class ="deletebutton">
+                <a href="/admin/text/delete/{{texts[attribute][lang]['id']}}"  Onclick="return ConfirmDelete()" >{{'delete.this'|trans }} </a> 
+                </div>
+               </div>
+               <div class="textpanel" > {{texts[attribute][lang]['comment']| raw }} </div>
+             {% else %}
+                <div   class="heading" >
+               <div class="label" >{{attribute}} : {{lang}}</div>
+                <div class="editbutton button1"> <a class= "editbutton" href="/admin/text/new/{{objecttype}}/{{objid}}/{{attribute}}/{{lang}}" >{{'create.this'|trans }} </a> </div>
+               </div>
+             {% endif %} 
+          {% endfor %}
+          <div class="hline"> </div>
+          {% endfor %}
+    </div>
+  </div>  
+  </div>
+{% endblock %}

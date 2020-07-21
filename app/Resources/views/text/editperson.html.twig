@@ -1,0 +1,49 @@
+{# views/message/contact.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/text/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="admin" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+  {%  set frtext = null %}
+   {%  set entext = null %}
+   {% if texts is defined %}
+     <div class ="heading" >{{heading}}   <span class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </span></div>
+     <div id="textedit" >
+         {% for text in texts %}
+         {% if text.language == "FR" or text.language == 'fr' %} 
+           {% set frtext = true %} 
+          {%endif%}
+         {% if text.language == 'EN' or text.language == 'FR' %} {% set entext= true %} {%endif%}
+          <div   class="textref" > {{ personname}} : {{text.attribute}}: {{text.language | upper}} :
+           <a class= "editbutton" href="/admin/edittext{{text.link}}" >{{'edit.this'|trans }} </a> 
+           </div>
+      
+          <div class="textpanel" > {{text.comment | raw }} </div>
+         {% endfor %}
+         </div>
+  {% endif %}
+  {% if not entext  %}
+  <div   class="textref" > {{ personname}}: EN : comment :
+           <a class= "editbutton" href="/admin/edittext/person/{{objid}}/comment/EN"  >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+    {% if not frtext  %}
+  <div   class="textref" > {{ personname}}: FR : comment :
+           <a class= "editbutton" href="/admin/edittext/person/{{objid}}/comment/FR" >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+
+
+
+div#imagesearchedit div.imagelist
+{
+    height:400px;
+    width:90%;
+    margin-left: 0px;
+    overflow:hidden; 
+    overflow-y:scroll;
+    border:1px solid yellow;
+    padding-left :10px;
+}
+
+div#imagesearchedit div.imagelist div div.image a
+ {
+    line-height: 26px;
+    margin-bottom:5px;
+    color:blue;
+    text-decoration:none;
+    margin-bottom:5px;
+ }
+
+div#imagesearchedit div.imagelist div div.image a.editbutton
+{
+    color:white;
+}
+ 
+ 
+

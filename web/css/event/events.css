@@ -1,0 +1,40 @@
+
+
+div#text div#list
+{
+    color : red;
+    min-height:200px;
+    xheight:200px; 
+    max-height:auto; 
+    overflow:hidden; 
+    overflow-y:scroll;
+    width:50%;
+    margin-left:100px;
+}
+
+div#text div#list p
+{
+    padding:0px;
+    margin-left:3px;
+    margin-right:10px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+div#text div#lang
+{
+    color : green;
+ 
+}
+
+p.list
+{
+    color : green;
+    min-height:200px;
+    xheight:200px; 
+    max-height:auto; 
+    overflow:hidden; 
+    overflow-y:scroll;
+    width:50%;
+    margin-left:100px;
+}

@@ -1,0 +1,64 @@
+{# views/event/showone.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/event/showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block js %}
+ {{ parent() }}
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="event">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+   {{ app.request.getLocale }}
+     {% if event is defined %}
+   {% if event.ancestors %}
+       {% set ancestors = event.ancestors %}
+        <p  class="breadcrumbs">
+          {% for key in ancestors | keys %}
+           => <a href='{{ancestors[key].link}}' >{{ancestors[key].title}} </a> 
+          {% endfor %}
+        </p>
+   {% endif %} 
+  
+      <div>
+        <span class='title' >{{ event.title}}</span>
+     </div>
+    {% if ( event.startdate is defined ) or (event.enddate is defined )%}
+    <div class="dates" > {{ event.startdate}} : {{ event.enddate}} </div>
+     {% endif %}
+  
+     
+   {% if participants %}
+   <div class="hidebar" > <button onclick="HideMe('pdiv' )">Participants</button></div>
+    <div id="pdiv" class=participants>
+        {% for  key in participants | keys %}
+         <div class=participant > <a href='{{participants[key].link}}' >{{participants[key].label}}</a>  </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+    
+      {% if event.children %}
+     {% set children = event.children %}
+     <ul class='children' >       
+       {% for key in children | keys %}
+         <li><a href='{{children[key]["link"]}}' > {{children[key]['title']}}</a> <span class="dates" >{{ children[key]['fstartdate'] }}</span> </li>
+      {% endfor %}
+      </ul>
+      {% endif %} 
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+

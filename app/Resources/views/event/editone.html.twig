@@ -1,0 +1,210 @@
+{# views/event/editone.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/event/editone.css') }}" rel="stylesheet" />
+ {% endblock %}
+
+ {% block js %}
+ {{ parent() }}
+ <script>
+     function myLoadFunction()
+     {
+     //active bookmarks in red 
+       document.getElementsByClassName("bookmarkpersonlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarklocationlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkimagelabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkcontentlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkurllabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkbiblolabel")[0].style.color = "#ff0000";
+     }
+    
+     function clicklocation(lid)
+     {
+      window.location.href = '/admin/event/setlocation/{{objid}}/'+lid;
+     }
+     
+     function clickimage(iid)
+     {
+        window.location.href = '/admin/event/addimage/{{objid}}/'+iid;
+     }
+     
+     function clickperson(pid)
+     {
+        window.location.href = '/admin/event/addparticipant/{{objid}}/'+pid;
+     }
+     
+     function clickcontent(cid)
+     {
+        window.location.href = '/admin/event/addcontent/{{objid}}/'+cid;
+     }
+     
+      function clickurl(cid)
+     {
+        window.location.href = '/admin/event/addurl/{{objid}}/'+cid;
+     }
+      function clickbiblo(bid)
+     {
+        window.location.href = '/admin/event/addbiblo/{{objid}}/'+bid;
+     }
+   </script>
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="editevent">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if event is defined %}
+   {% if event.ancestors %}
+       {% set ancestors = event.ancestors %}
+        <div  class="breadcrumbs">
+          {% for key in ancestors | keys %}
+           => <a href='{{ancestors[key].link}}' >{{ancestors[key].title}} </a> 
+          {% endfor %}
+        </div>
+   {% endif %} 
+  
+   <div class="heading">
+     <div class="label"> {{'event.being.edited'|trans}}</div>
+     <div class='title' >{{ event.title}}</div>
+     </div>
+    <div class= "heading">
+     <div class="editbutton button1" ><a href="/admin/event/detail/{{event.eventid}}"> {{"edit.event.detail"|trans }} </a></div>
+     <div class="editbutton " ><a href="/admin/event/addbookmark/{{event.eventid}}"> {{"bookmark.event"|trans }} </a></div>
+     <div class="returnbutton" ><a href="{{returnlink}}"> {{".back"|trans }} </a></div>
+        {% if not event.children %}
+         <div class="deletebutton" ><a  href="/admin/event/delete/{{event.eventid}}" Onclick="return ConfirmDelete()" > {{"delete"|trans }} </a></div>
+        {% endif %}
+   </div>
+   
+   {% if ( event.startdate is defined ) or (event.enddate is defined )%}
+     <div class="dates" > {{ event.startdate}} : {{ event.enddate}} </div>
+   {% endif %}
+   
+   
+      <div class="location heading" > 
+      <div class="label" >{{'.place'|trans }}</div>
+                <div class="tooltip">?  <span class="tooltiptext">{{'to.add.location.use.bookmarks'|trans }}</span>
+              </div>
+                {% if event.locid %}
+                 <div class= "subheading">
+  
+      <div ><a href ="{{ event.location['link'] }}"> {{ event.location['name'] }}</a> </div>
+         <div class="deletebutton button1" ><a href="/admin/event/deletelocation/{{event.eventid}}" Onclick="return ConfirmDelete()" > {{"delete"|trans }} </a></div>
+         </div>
+          {% endif  %}
+      </div>
+
+     
+    
+     
+        {% if images %}
+        <div class="imagegroup" >
+     <div class="heading">
+          <div class="label" > {{'.images'|trans }} </div>  
+          <div class="tooltip">?  <span class="tooltiptext">{{'to.add.images.use.bookmarks'|trans }}</span>
+              </div>
+         
+            <div class="images">
+                {% for image in images %}
+                <div class="image">
+                    <div class="imageimage" ><a href="{{image.link}}" ><img src="{{image.fullpath}}" /></a></div>
+                    <div class="imagedelete deletebutton" ><a href="/admin/event/removeimage/{{event.eventid}}/{{image.refid}}">{{'.delete'|trans }}</a></div>
+                </div>
+                {% endfor %}
+             </div>
+              </div>
+             </div>
+             {% else %}
+               <div class="heading">
+          <div class="label" > {{'.images'|trans }} </div>  
+          <div class="tooltip">?  <span class="tooltiptext">{{'to.add.images.use.bookmarks'|trans }}</span>
+              </div>
+          </div>
+              {% endif %}  
+    
+       
+            
+     <div class="refgroup" >
+     <div class="heading">
+     <div class="label"> {{'.links'|trans}}</div>
+     <div class="tooltip">?  <span class="tooltiptext">{{'to.add.link.use.bookmarks'|trans }}</span>
+              </div>
+    
+     </div>
+    <div class="reflist">
+
+         {% for ref in refs %}
+         <div class="subsubheading">
+               <div class="content" >{{ref.label}}</div>
+               <div class="deletebutton button1" ><a href="/admin/event/removelink/{{event.eventid}}/{{ref.id}}" Onclick="return ConfirmDelete()" >{{'.delete'|trans }}</a></div>
+        </div>
+           {% endfor %}
+    </div>
+    </div>
+ 
+           {% if text or title %}
+           <div class="textpanel heading" >
+                  <div class="label" > {{'.texts'|trans }} </div>  
+               
+                 <div class="edit editbutton first">
+                   <a href = "/admin/text/event/{{objid}}"   > {{'edit.text'|trans }}</a>
+                </div>
+            </div>
+        {%else%}
+            <div  class="notext heading" >
+                <div class="label red" > {{'no.text'|trans }} </div>
+                <div  class="editbutton button1"><a href = "/admin/text/event/{{objid}}"  > {{'add.text'|trans }}</a></div>
+            </div>
+        {% endif %}
+   
+   
+     
+        <div class="heading" > 
+            <div class="label">{{'.participants'|trans}}</div>
+         <div class="tooltip">?  <span class="tooltiptext">{{'to.add.participation.use.bookmarks'|trans }}</span>
+       </div>
+   </div>     
+   {% if participants %}
+   <div class="hidebar" > <button onclick="HideMe('pdiv' )">{{'.participants'|trans}}</button>
+       </div>
+    <div id="pdiv" class="participants">
+        {% for  key in participants | keys %}
+         <div class="participant" > <a href='{{participants[key].link}}' >{{participants[key].label}}</a>  </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    <div class="hidebar" > 
+        <button onclick="HideMe2('pdiv2' )">{{'child.events'|trans }}</button>
+    </div>
+  
+    <div id="pdiv2" class="children">
+    <div class= "subheading" >
+      <div class="label"> {{'child.events'|trans}}</div>
+      <div class="editbutton first" >  <a href="/admin/event/detail/-{{event.eventid}}"> {{"edit.event.new"|trans }} </a></div>
+    </div>
+      {% if event.children %}
+      {% set children = event.children %}
+      <div class='children' >       
+        {% for key in children | keys %}
+          <div class="child" >
+          <a href='{{children[key]["link"]}}' > {{children[key]['title']}}</a>
+          <div class="dates" >{{ children[key]['fstartdate'] }}</div> 
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %} 
+    </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+

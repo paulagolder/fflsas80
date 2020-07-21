@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>europe</name>
+      <Placemark>
+        <name>europe</name>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -19.2123397,52.5640594,0
+                -19.5639022,35.5694048,0
+                26.1392228,33.8353744,0
+                26.4028947,53.0422658,0
+                -19.2123397,52.5640594,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+  </Document>
+</kml>

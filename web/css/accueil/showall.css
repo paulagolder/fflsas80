@@ -1,0 +1,54 @@
+
+
+
+xh1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+
+xdiv.peoplesidebar nav ul
+{ 
+    height:300px;
+    xwidth:90%;
+    margin-left: -30px;
+    overflow:hidden; 
+    overflow-y:scroll;
+    display: block;
+    list-style-type: disc;
+    
+}
+
+
+xdiv.peoplesidebar
+{
+     xheight: 10em;
+	border-style: double;
+	border-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background-color: rgba(76, 76, 76, 0.2);
+	xmargin: 10px;
+	padding: 10px;
+	xpadding-top: 20px;
+}
+
+xdiv.peoplesidebar h1
+{
+  margin-left:0;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-right:5px;  
+}
+    
+    
+    
+div#person div.eventtree ul li ul li ul li ul li div.incident
+
+{
+margin-left: 1em;
+
+}
+
+div#person div.eventtree ul li ul li ul li ul li div.incident a
+{
+    color: white;
+}

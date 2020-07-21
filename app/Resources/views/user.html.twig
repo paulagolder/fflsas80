@@ -1,0 +1,68 @@
+{# views/user.html.twig #}
+
+{# a editer pour le presentation du visiteur au site  #}
+
+<html>
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="max-age=2000" /> 
+        <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}" />
+        <link rel="shortcut" type="image/x-icon" href="{{asset('favicon.ico')}}" />
+        
+        {% block title %}
+        <title>{{'.welcome'|trans }}</title>
+        <link rel="prefetch" href="{{ asset('common/skybig.jpg') }}">
+            {% endblock %}
+            
+            {% block stylesheets %}
+            <link href="{{ asset('css/f_main.css') }}" rel="stylesheet" />
+             <link href="{{ asset('css/f_header.css') }}" rel="stylesheet" />
+               <link href="{{ asset('css/f_footer.css') }}" rel="stylesheet" />
+              <link href="{{ asset('css/f_menu.css') }}" rel="stylesheet"  />
+              <link href="{{ asset('css/form.css') }}"rel="stylesheet" />
+            {% endblock %}
+            
+            {% block js %}
+            <script src="{{asset('js/main.js')}}"></script>
+              <script src="{{asset('js/frbookmarks.js')}}"></script>
+            {% endblock %}
+            
+        </head>
+        <body  >
+        
+        <div id="page" >
+            
+            {% block myheader %}
+              {% include 'f_header.html.twig' %}
+            {% endblock %}
+            
+            
+            {% block mypage %}
+            <div class='mypage'>    
+                <div class='mypageinner'> 
+                    {% include 'user_sides.html.twig' %}
+                    
+                    {% block middle %}
+                     <div id="middle" >
+                        <div><p> middle</p></div>
+                     </div>
+                    {% endblock %}
+                    
+                </div>
+            </div>
+           {% endblock %}
+            
+            
+           {% block myfooter %}
+              <div id="footer">
+                {% include 'f_footer.html.twig' %}
+              </div>
+           {% endblock %}  
+    
+        </div>
+        {% block quill %}
+        {% endblock %}
+    </body>      
+</html>

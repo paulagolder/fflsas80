@@ -1,0 +1,21 @@
+
+{% block stylesheets %}
+   <link href="{{ asset('css/latestedits/show.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+   {% if edits %}
+
+    <div id="latestedits" class="frame">
+       <div class="heading">
+         <div class="label" >{{'latest.edits'|trans }}</div> 
+       </div>
+          {% for edit in edits  %}
+          
+       <div class="{{edit.objecttype}}"> 
+        <a href="/{{lang}}/{{edit.link}}" > {{edit.label}} </a>
+      </div>
+      {% endfor %}
+   </div>
+  {% endif %}
+

@@ -1,0 +1,101 @@
+
+
+
+div.search div.searchlist
+{
+    height:400px;
+    width:90%;
+    xmargin-left: 1em;
+    margin-top: 1em;
+    overflow:hidden; 
+    overflow-y:scroll;
+   border: 1px solid yellow;
+}
+
+div.search div.labellist
+{
+  
+}
+
+div.search div.searchlist div div.search a
+ {
+    line-height: 26px;
+    margin-bottom:5px;
+    color:blue;
+    text-decoration:none;
+    margin-bottom:5px;
+ }
+
+div.search div.searchlist div div.search a.editbutton
+{
+    color:white;
+}
+ 
+ div.search div.searchlist div.search.row:hover
+ {
+         background: rgba(80, 0, 0, 0.1);
+ }
+
+ div.search div.searchlist div.search.row.selectable:hover
+ {
+         background: rgba(80, 0, 0, 0.1);
+ }
+ 
+div#label  div.searchlist.labellist div.label.row div.editbutton a
+{
+     
+    line-height: 34px;
+    margin: 0 10px;
+    padding: 7px;
+}
+ 
+
+ div.search div.searchlist div.row:nth-child(2n+2)
+{
+  background:rgba(0,0,80,0.05);
+}
+
+
+div.search form div.heading div.label
+{
+  font-size:1.0em;
+  color: yellow;
+}
+
+div.search form
+{
+    margin-top:1em;
+}
+
+div.search form div.row div.label
+{
+    font-size:1.0em; 
+    color: yellow;
+}
+
+div.search div.label.row div.tag
+{
+    width: 10em;
+    overflow-wrap: normal;
+    background-color:silver;
+    border: 1px solid black;
+    font-size: 0.8em;
+    padding: 6px;
+   
+}
+
+div.search div.label.row div.lang
+{
+   width: 2em;
+   background-color:silver;
+   border: 1px solid black;
+   font-size: 0.8em;
+   padding: 6px;
+    
+}
+
+div.search div.label.row input.text
+{
+    width:30em;
+    
+}

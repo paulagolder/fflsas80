@@ -1,0 +1,61 @@
+{# views/search/showall.html.twig #}
+
+{% extends 'user.html.twig' %}
+ {% set locale =  app.request.getLocale() | lower %}
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/search/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+       {% set maxlist = 20 %}
+     {% if is_granted('ROLE_ADMIN') %}  
+             {% set maxlist = 100 %}
+        {% endif %}
+  <div id="search" class="search" >
+   {% if message %}
+     <div class="pageheading"> {{message|trans }}</div>
+   {% endif %}
+
+   <form  action="/{{locale}}/search/all">
+   <div class="heading">
+    <div class="label" > {{'enter.search'|trans }}</div>
+   <input type="text" name="searchfield">
+   <input type="submit" value="{{'.search'|trans }}" >
+   </form>
+   </div>
+   {% if results is defined  %}
+     {% if results %}
+       <div class="subheading"> 
+       <div class="label">{{'search.results'|trans}} </div> 
+       <div class="title">{{searchkey}}</div> 
+      </div> 
+       {% for key, group in results %}
+       {%if ( group | length ) > maxlist %}
+       <div class="subheading">
+        <div class="label"> {{'found.too.many'|trans}} {{key|trans}} ( {{group | length}} )</div>
+        </div>
+       {% else %}
+         <div class="subheading" >
+         <div class="label" > {{'found'|trans}} {{key|trans}}</div>
+       </div>
+           <ul>
+             {% for subject in group %}
+             {% if subject.label is iterable %}
+             <li><a href="{{subject.link}}" >{{ subject.label.comment}}</a> </li> 
+             {% else %}
+              <li><a href="{{subject.link}}" >{{ subject.label}}</a> </li> 
+              {% endif%}
+             {% endfor %}
+           </ul>
+           {% endif %}
+       {% endfor %}
+  {% endif %}
+  {% endif %}
+</div>
+</div>  
+{% endblock %}

@@ -1,0 +1,56 @@
+{# views/text/update.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+   
+  
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block js %}
+ {{ parent() }}
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+<div id="contentedit" >
+
+<div class="heading">
+ <div class="label" >{{'edit.contents'|trans }} </div>
+  <div class="title" >{{ label}} : {{contentid}} </div>
+  <div class="returnbutton button1"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+</div> 
+<div class="form">
+{{ form_start(form) }}
+
+ {{  form_row(form.subjectid) }}
+
+  {{ form_row(form.language) }}
+    {{ form_row(form.title) }}
+    <div id="maintext">
+{{ form_row(form.text) }}
+    </div>
+    <button type="submit">{{'.submit'|trans }} </button>
+{{ form_end(form) }}
+
+ </div> 
+</div>
+ <div id="summernotex"></div>
+
+<script>
+    $(document).ready(function() { $('#summernotex').summernote(); });
+</script>
+</div>
+{% endblock %}
+
+
+

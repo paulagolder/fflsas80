@@ -1,0 +1,79 @@
+
+div#loginerror
+{
+    font-size:2.em;
+    color: red;
+    text-align: center; 
+}
+
+div#loginform
+{
+    font-size:1.em;
+    color: yellow;
+    margin: 0 auto;
+    width: 350px; 
+}
+
+
+div#loginform div.form
+{
+    margin-top: 20px;
+} 
+
+
+
+div#loginform div div  label
+{
+    
+    flex:1;
+}
+
+div#loginform div div  input
+{
+    
+    flex:1;
+}
+
+div#loginform div div.username
+{
+    margin-top: 20px;
+     display:flex;
+}
+
+div#loginform div  div.password
+{
+    margin-top: 20px;
+     display:flex;
+}
+
+div#loginform button
+{
+    margin-top: 20px;
+    
+}
+
+
+div#loginform div.registration 
+{
+ margin-top:60px;
+}
+
+
+div#loginform div.registration a.registerbutton
+{
+    
+    all:unset;
+    background: #e3e3e3;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+    box-shadow: inset 0 0 1px 1px #f6f6f6;
+    color: #333;
+    font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+    padding: 8px 0 9px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    width: 200px;
+    display: block;
+    cursor: pointer;
+}

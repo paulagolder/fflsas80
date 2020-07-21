@@ -1,0 +1,73 @@
+{# views/message/contact.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/text/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block myheader %} {{ parent() }}{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="texts" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+  {%  set frtext = null %}
+   {%  set entext = null %}
+     {%  set frtitle = null %}
+   {%  set entitle = null %}
+   {% if texts is defined %}
+     <div class ="heading" >{{heading}}   <span class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </span></div>
+     <div id="textedit" >
+         {% for text in texts %}
+         {% if text.language == "FR" or text.language == 'fr' %} 
+         {% if text.attribute == 'title' %}
+           {% set frtitle = true %} 
+         {%endif%}
+         {% if text.attribute == 'comment' %}
+           {% set frtext = true %} 
+         {%endif%}
+           {%endif%}
+         {% if text.language == 'EN' or text.language == 'FR' %} 
+          {% if text.attribute == 'title' %}
+           {% set entitle = true %} 
+         {%endif%}
+         {% if text.attribute == 'comment' %}
+           {% set entext = true %} 
+         {%endif%}
+          {%endif%}
+          <div   class="textref" > {{ personname}} : {{text.attribute}}: {{text.language | upper}} :
+           <a class= "editbutton" href="/admin/edittext{{text.link}}" >{{'edit.this'|trans }} </a> 
+           </div>
+      
+          <div class="textpanel" > {{text.comment | raw }} </div>
+         {% endfor %}
+         </div>
+  {% endif %}
+  {% if not entitle  %}
+  <div   class="textref" > {{ personname}}: EN : title :
+           <a class= "editbutton" href="/admin/edittext/image/{{objid}}/title/EN"  >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+    {% if not frtitle  %}
+  <div   class="textref" > {{ personname}}: FR : title :
+           <a class= "editbutton" href="/admin/edittext/image/{{objid}}/title/FR" >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+  {% if not entext  %}
+  <div   class="textref" > {{ personname}}: EN : comment :
+           <a class= "editbutton" href="/admin/edittext/image/{{objid}}/comment/EN"  >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+    {% if not frtext  %}
+  <div   class="textref" > {{ personname}}: FR : comment :
+           <a class= "editbutton" href="/admin/edittext/image/{{objid}}/comment/FR" >{{'create.this'|trans }} </a> 
+           </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}

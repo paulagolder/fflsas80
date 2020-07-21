@@ -1,0 +1,75 @@
+{# views/label/labelsearch.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/searchlabel.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block middle %}
+<div id="middle" >
+  <div id="label" class="search" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+  
+    <div class="heading">
+   
+       <div class="label">{{ heading|trans }}</div>
+  
+       
+         <div class="editbutton button1"><a class="editbutton" href ="/admin/label/generate/{{mode}}">{{'update.translation.files'|trans}}</a></div>
+           <form action="/admin/label/newtag" >   
+          <input type="text" name="newtag" id="newtag" value="">
+         <div class="editbutton button1">  <input type="submit" value="{{'new.label'|trans}}"></div>
+        </form>
+   </div>
+ 
+  <form  action="/admin/label/search">
+  <div class="heading">
+  {% if mode== 'itype' %}
+       <input type="radio" name="_mode" value="message"> Messages<br>
+      <input type="radio" name="_mode" value="itype"  checked >Incidents<br>
+{% else %}
+      <input type="radio" name="_mode" value="message"  checked> Messages<br>
+      <input type="radio" name="_mode" value="itype">Incidents<br>
+{% endif %}
+   <div class="label"> {{'enter.search'|trans }}</div>
+   <input type="text" name="searchfield">
+   <input type="submit" value="{{'.search'|trans }}" >
+   <div class="editbutton"><a href="/admin/label/search/*">{{'.reset'|trans}}</a></div>
+   </div>
+   </form>
+ 
+   {% if labels is defined %}
+     <div class="subheading">
+     <div class="label">{{subheading|trans}}</div> 
+     <div class="title">{{searchfield}}</div> 
+     </div>
+     <form>
+     <div class="searchlist labellist" >
+         {% for label in labels  %}
+            <div class="label row" >
+             <div class="tag" >{{label.tag}}</div> 
+               <div class="lang">{{label.lang}}</div> 
+                <input class="text"  id="t{{label.id}}" name="t{{label.id}}" type="text" value="{{label.text}}">
+              <input type="submit" formaction="/admin/label/edit/{{label.id}}" value="EDIT">
+              <div class="editbutton"><a href="/admin/label/delete/{{label.id}}">{{".delete"|trans}}</a></div>
+            </div>
+         {% endfor %}
+     </div>
+     </form>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+
+{% block right %}
+
+
+
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+
+{% endblock%}

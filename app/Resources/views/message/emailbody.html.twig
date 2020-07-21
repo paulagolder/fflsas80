@@ -1,0 +1,17 @@
+{# views/message/emailbody.html.twig #}
+
+
+<html>
+<style>
+div.bodytext { font-size:12pt; color:black }
+div.link { font-size:12pt;  text-align: center;  }
+div.messageheading div.label { font-size:14pt; text-align: center; text-weight : bold; color: black }
+</style>
+<div class="mailmessage">
+
+{{ message.body | raw }}
+
+</div>
+
+</html>
+

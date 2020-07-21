@@ -1,0 +1,160 @@
+
+div#content
+{
+    background-color: rgba(128, 147, 183, 0.7);
+    padding: 10px;
+}
+
+ div#content
+{
+    xbackground-color: #8093b7;
+}
+
+div#content div.maintext
+{
+    margin-right:1em;
+    text-align:left;
+}
+
+
+
+div#content div.contents div.textwindow.resizable
+{
+    
+    margin-top:20px;
+    width: 600px;
+    xheight: 200px;
+    max-height: 200px;
+    xbackground-color: #eee;
+    overflow: hidden;
+    border: 5px solid gray;
+}
+
+div#content  strong
+{
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+div#content div.contents div.textwindow.resizable h1
+
+div#content  h1
+{
+     font-size: 2.0em
+     color:maroon;
+     margin-left:2em;
+}
+
+
+div#content  h2
+{
+     font-size: 1.5em
+     color:black;
+}
+
+
+
+ div#content  p.ql-align-center
+ {
+     
+     text-align:center;
+ }
+ 
+  div#content  p.text-align-center
+ {
+     
+     text-align:center;
+ }
+ 
+  div#content p.ql-align-right
+ {
+     
+     text-align:right;
+ }
+ 
+  div#content  p.ql-align-left
+ {
+     
+     text-align:left;
+ }
+
+div#content  blockquote
+{
+    font-size: 1em;
+    xfont-weight: bold;
+    margin-top: 0em;
+    margin-bottom: 0em;
+   font-style: italic;
+}
+
+div#content div.contentlist div div.content a
+ {
+    line-height: 26px;
+    margin-bottom:5px;
+    color:blue;
+    text-decoration:none;
+    margin-bottom:5px;
+ }
+
+div#content div.contentlist div div.content a.editbutton
+{
+    color:white;
+}
+ 
+ 
+div#content div.contentlist
+{
+    height:400px;
+    width:90%;
+    margin-left: 1em;
+    overflow:hidden; 
+    overflow-y:scroll;
+   border: 1px solid yellow;
+}
+
+
+
+div#content  p
+{
+    margin-top:0.1em;
+    margin-bottom:0em;
+}
+div#content  h1
+{
+    margin-top:0em;
+    margin-bottom:0.5em;
+    margin-left:0em;
+}
+
+div#content  h2
+{
+    margin-top:0em;
+    margin-bottom:0.2em;
+}
+
+
+ 
+ div#contentedit
+ {
+     margin-bottom: 40px;
+ }
+ 
+div#content div.news  div.heading div.date
+{
+    font-size: 0.7em;
+    
+}
+ 
+
+#dont know what these are for
+
+div.modal div.note-btn-group.btn-group div.dropdown-menu {
+display: none !important;
+}
+
+div.modal div.note-btn-group.btn-group.show div.dropdown-menu {
+display: block !important;
+overflow-y: scroll;
+max-height: 250px;
+left: 0;
+}

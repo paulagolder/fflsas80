@@ -1,0 +1,50 @@
+{# views/image/adminsearch.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/searchall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="images" class="search">
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+    <div class="heading">
+      <div class="label"> {{ heading|trans }}</div>
+      <div class="editbutton button1"><a class="editbutton" href ="/admin/image/new">{{'new.image'|trans}}</a></div>
+   </div>
+  <form  action="/admin/image/search">
+  <div class="row">
+   <div class="label"> {{'enter.search'|trans }}</div>
+   <input type="text" name="searchfield">
+   <input type="submit" value="{{'.search'|trans }}" >
+   </div>
+   </form>
+   {% if images is defined %}
+    <div class="subheading">
+     <div class="label">{{subheading|trans}}</div> 
+     <div class="title">{{searchword}}</div>
+    </div>
+     <div class="searchlist" >
+       <div >
+         {% for image in images  %}
+            <div class="image row" >
+              <div >{{ image.name}}</div>
+              <div class="editbutton button1"><a class="editbutton" href=" /admin/image/addBookmark/{{image.imageid}}">{{'bookmark.image'|trans}}</a></div>
+              <div class="editbutton"><a class="editbutton" href="/admin/image/{{image.imageid}}">{{'see.image'|trans}}</a></div>
+              </div>
+         {% endfor %}
+      </div>
+     </div>
+  {% endif %}
+  </div>
+  </div>
+{% endblock %}
+
+
+

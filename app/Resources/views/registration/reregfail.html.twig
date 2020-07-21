@@ -1,0 +1,28 @@
+{# views/registration/reregfail.html.twig #}
+
+
+{% import 'macros.twig' as m %}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('/css/person/showone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+
+<div id="stage2">
+<div class="heading">
+  <div class="label"> {{'await.stage2'|trans }}</div>
+  <div class="title"> {{ username }}</div>
+  <div class="title"> {{ email }}</div>
+  </div>
+</div>
+
+</div>
+</div>
+{% endblock %}

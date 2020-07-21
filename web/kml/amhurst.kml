@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Carte de la mission Amherst - Avril 1945</name>
+  <description><![CDATA[- Positions des DZ prevues pour le parachutage des sticks des 3e et 4e SAS
+- Zones de parachutage des sticks]]></description>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style63">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style64">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style66">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style29">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style48">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style62">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/grn-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style57">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style58">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style59">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style61">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style65">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style60">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style67">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>DZ 3</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Leblond et Nicol du 3e squadron / 4e SAS ainsi que le stick Lageze et trois jeeps</div>]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>6.594501,52.893021,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Leblond (3rd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Leblond-Mackie - 2 miles au Nord-Est de la DZ 3 prevue</div>]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>6.638339,52.911308,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Nicol (3rd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Nicol - Raufast - 11 miles au Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>6.464703,52.748062,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 4</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour les sticks Simon, Stephan et Varnier du 1er squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>6.758351,52.990295,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Simon (1st squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Simon - Bornhauser - 5 miles Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>6.742258,52.921013,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Stephan (1st squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Stephan - Poirier - 3 miles au Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>6.722045,52.950733,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Varnier (HQ squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Varnier - Judet - 4 miles au Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style63</styleUrl>
+    <Point>
+      <coordinates>6.727216,52.930107,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 6</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour les sticks de Camaret et Edme du 2e squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>6.659657,52.889771,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick de Camaret (2nd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick de Camaret - Andrieu</div>]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>6.660966,52.889008,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Edme (2nd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Edme - Bachus - 3 miles au Sud-Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>6.714320,52.831680,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 8</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le stick Larralde et 3 jeeps</div>]]></description>
+    <styleUrl>#style64</styleUrl>
+    <Point>
+      <coordinates>6.588621,52.945484,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Larralde </name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Larralde - Quillet - 3 miles au Sud-Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>6.638352,52.911282,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 10</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Appriou, Sriber et Forgeat du 1er squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>6.730478,52.974770,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Appriou (1st squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Appriou - Merlo.</div>]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>6.730435,52.980263,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Sriber (1st squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Sriber - Remy - 28 miles au Sud-Ouest de la DZ prevue.</div>]]></description>
+    <styleUrl>#style66</styleUrl>
+    <Point>
+      <coordinates>6.504893,52.574249,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Forgeat (1st Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Forgeat - Hartmanshenn - 6 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>6.696639,52.893887,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 21</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Lasserre et Bourrel du HQ squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>6.687090,53.060574,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Lasserre (HQ squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Lasserre - de Bourmont - legerement au Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>6.694493,53.055569,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Bourrel (HQ Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage estimee du stick Bourrel - Maury - Au Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>6.696339,53.074947,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 22</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Gramond et Berr du HQ squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style29</styleUrl>
+    <Point>
+      <coordinates>6.712711,53.024853,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Gramond (HQ Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Gramond - Bacuez - 2 miles au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>6.710694,52.992805,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Berr (HQ Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage estimee du stick Berr - Le Borgne - Au Sud-Est de la DZ prevue.</div>]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>6.768694,53.017105,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 23</name>
+    <description><![CDATA[<div dir="ltr">DZ Prevue pour le parachutage du stick Cochin et largage de 3 jeeps</div>]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>6.649861,52.956886,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Cochin</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Cochin - 1 miles au Nord de la DZ prevue</div>]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>6.651750,52.969604,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 24</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Legrand, Corta et Gabaudan du 2e squadron / 4e SAS</div>]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>6.716380,52.934349,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Legrand (2nd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Legrand - Lesne - 3 miles au Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>6.730403,52.980255,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Corta (2nd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Corta - Reinhart - Legerement au Sud-Ouest de la DZ prevue.</div>]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>6.712217,52.929874,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Gabaudan (2nd Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Gabaudan - Cassel - 2 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>6.698120,52.902805,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 25</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Puech-Samson, Taylor et Betbeze.</div>]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>6.674623,52.863895,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Puech-Samson</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Puech-Samson - Moulie - 3 miles au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style48</styleUrl>
+    <Point>
+      <coordinates>6.685395,52.812943,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Taylor (3rd Squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Taylor - Richard - 2 miles au Nord-Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>6.683357,52.893940,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Betbeze (3rd squadron / 4e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Betbeze - Le Bobinnec - 3 miles au Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style62</styleUrl>
+    <Point>
+      <coordinates>6.640205,52.821514,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 26</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage du stick Lageze  dans la nuit du 8 au 9 avril</div>]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>6.508691,53.091274,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Lageze</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Lageze - Metz dans la nuit du 8 au 9 avril - 9 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>6.483221,52.959110,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 11</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Rouan et Ferchaud du 1st squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>6.563870,53.057743,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Rouan (1st Squadron / 3e SAS</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage estimee du stick Rouan - Ca&iuml;tucoli</div>]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>6.554718,53.031460,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Ferchaud (1st squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Ferchaud - Barres - 1 miles au Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>6.579346,53.067841,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 12</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour la parachutage des sticks Valayer et Poli-Marchetti du 1st squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>6.508648,53.091358,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Valayer (1st Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Valayer - Raillard - 7 miles Sud-Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style57</styleUrl>
+    <Point>
+      <coordinates>6.554439,52.995800,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Poli-Marchetti (1st Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Poli-Marchetti - Lev&ecirc;que - 2 miles au Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style58</styleUrl>
+    <Point>
+      <coordinates>6.494465,53.066311,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 13</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Picard, Boiteux et Boulon du 1st squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>6.486139,53.032955,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Picard (1st Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Picard - de Sablet - 3 miles Sud-Sud-Ouest de la DZ prevue.</div>]]></description>
+    <styleUrl>#style59</styleUrl>
+    <Point>
+      <coordinates>6.480067,52.994110,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Boiteux (1st squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Boiteux - Juillard - 10 miles au Sud-Ouest de la DZ prevue.</div>]]></description>
+    <styleUrl>#style61</styleUrl>
+    <Point>
+      <coordinates>6.432452,52.898548,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Boulon (1st Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Boulon - Moutier - Legerement au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>6.489723,53.019444,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 15</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Thome, Hubler et Vidoni du 2e squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>6.368036,52.924686,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Thome (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Thome - Anspach - 4 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>6.338189,52.866058,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Hubler (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Hubler - Boye.</div>]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>6.368036,52.924648,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Vidoni (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Vidoni - Brunet - 9 miles au Nord de la DZ prevue.</div>]]></description>
+    <styleUrl>#style65</styleUrl>
+    <Point>
+      <coordinates>6.351986,53.051880,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 16</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Collery, Duno et Sicaud du 2e squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>6.332245,52.977383,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Collery (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Collery - Bourdon - 4 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>6.304779,52.915100,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Duno (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Duno - Chauveau - 1 mile au Sud-Ouest de la DZ prevue.</div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>6.309800,52.966114,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Sicaud (2nd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Sicaud - Laboube - 5 miles au Nord-Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>6.351728,53.051777,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 17</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Baratin, Bouffartigues et Lagallarde du 3e squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>6.268666,52.633648,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Baratin (3rd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Baratin - dAzermont - 7 miles au Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>6.410179,52.587509,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Bouffartigue (3rd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Bouffartigue - Bongeot - 3 miles au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>6.269588,52.596790,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Lagallarde (3rd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Lagallarde - Galesne - 3 miles au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>6.262121,52.595043,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 18</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Gayard et Decours du 3e squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>6.344733,52.702682,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Gayard (3rd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Gayard - Carado - 3 miles au Nord-Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>6.361599,52.742348,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Decours (3rd Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Decours - Marchal - 9 miles au Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>6.508048,52.784439,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 19</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks de Bollardiere, Paumier et Dreyfus du HQ squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style60</styleUrl>
+    <Point>
+      <coordinates>6.476097,52.813683,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick de Bollardiere (HQ squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick de Bollardiere - Simon - 1 miles au Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>6.490173,52.800648,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Paumier (HQ Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Paumier - Leca - 3 miles au Sud-Sud-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style67</styleUrl>
+    <Point>
+      <coordinates>6.481891,52.766163,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Dreyfus (HQ Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Dreyfus - Akar - 3 miles au Nord-Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>6.506363,52.847206,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DZ 20</name>
+    <description><![CDATA[<div dir="ltr">DZ prevue pour le parachutage des sticks Vallieres, Grumbach et Lecomte du HQ squadron / 3e SAS</div>]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>6.493564,52.884903,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Vallieres (HQ Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Vallieres - Van Lanthen - 5 miles au Sud-Sud-Ouest de la DZ prevue</div>]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>6.471462,52.820816,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Grumbach (HQ Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Grumbach - Liblin - 1 miles au Sud de la DZ prevue</div>]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>6.495205,52.870419,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stick Lecomte (HQ Squadron / 3e SAS)</name>
+    <description><![CDATA[<div dir="ltr">Zone de parachutage du stick Lecomte - Suin - 2 miles &agrave; l&#039;Est de la DZ prevue</div>]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>6.530643,52.883427,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

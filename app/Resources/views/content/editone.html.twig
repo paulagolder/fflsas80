@@ -1,0 +1,58 @@
+{# views/content/editone.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/content/content.css') }}" rel="stylesheet" />
+{% endblock %}
+ {% block js %}
+ {{ parent() }}
+ <script>
+     function clicklocation(lid)
+     {
+      window.location.href = '/admin/event/setlocation/{{objid}}/'+lid;
+     }
+     
+     function clickperson(pid)
+     {
+        window.location.href = '/admin/image/addref/person/'+pid+'/{{objid}}';
+     }
+ </script>
+{% endblock %}
+
+
+{% block middle %}
+  <div id="middle" >
+  <div id="content" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+
+   {% if content %}
+   <div class="heading" >
+    <div class="heading">{{content.title}}</div> 
+     <div class="editbutton" ><a class='editbutton' href="/admin/content/edit/{{content.contentid}}">{{'edit.content'|trans}}</a></div>
+       <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+      <div class="deletebutton" ><a class='deletebutton' href="/admin/content/delete/{{content.contentid}}" Onclick="return ConfirmDelete()" >{{'delete.content'|trans}}</a></div>
+     </div>
+     
+    <div class='maintext resizable' >
+        {{ content.text | raw}} 
+     </div>
+
+     <div class="refs">
+       <div  class="linksheading" >{{'links.to'|trans }}</div>
+       {% for obtype , oref in refs %}
+        <div class="linkgroup" >{{obtype|trans}}</div>
+         {% for obid , ref in oref %}       
+        <div class="ref" > <a href="{{ ref.link }}">{{ref.label}}</a> </div>
+        {% endfor %}
+           {% endfor %}
+    </div>
+     </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+

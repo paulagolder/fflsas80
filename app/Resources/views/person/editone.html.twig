@@ -1,0 +1,175 @@
+{# views/person/editone.html.twig #}
+
+{% import 'macros.twig' as m %}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+   {{ parent() }}
+   <link href="{{ asset('/css/person/editone.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block js %}
+ {{ parent() }}
+ <script>
+     
+
+     function myLoadFunction()
+     {
+     //active bookmarks in red 
+       document.getElementsByClassName("bookmarkpersonlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarklocationlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkimagelabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkcontentlabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkurllabel")[0].style.color = "#ff0000";
+       document.getElementsByClassName("bookmarkbiblolabel")[0].style.color = "#ff0000";
+     }
+     
+  
+     function clickevent(eid)
+     {
+        window.location.href = '/admin/person/addevent/{{person.personid}}/'+eid;
+     }
+     function clickimage(iid)
+     {
+        window.location.href = '/admin/person/addimage/{{person.personid}}/'+iid;
+     }
+     function clicklocation(lid)
+     {
+        window.location.href = '/admin/person/addlocation/{{person.personid}}/'+lid;
+     }
+     function clickcontent(cid)
+     {
+        window.location.href = '/admin/person/addcontent/{{person.personid}}/'+cid;
+     }
+      function clickurl(cid)
+     {
+        window.location.href = '/admin/person/addurl/{{person.personid}}/'+cid;
+     }
+      function clickbiblo(bid)
+     {
+        window.location.href = '/admin/person/addbiblo/{{person.personid}}/'+bid;
+     }
+     
+   </script>
+{% endblock %}
+
+
+
+{% block middle %}
+<div id="middle" >
+<div id="editperson">
+    <div class="subheading" >
+        <div class="editbutton" ><a href = "/admin/person/detail/0" >{{'new.person'|trans }}</a></div>
+    </div>
+    <div class="person" >
+        {% if message %}
+           <h1> {{message}}</h1>
+        {% endif %}
+        
+        {% if person is defined %}
+          <div class="heading" >
+            <div class="label">  {{'person.a.editer'|trans }} : </div>
+            <div class="title">   {{ person.fullname}} </div>
+           </div>
+           <div class="heading" >
+            <div class="editbutton button1" ><a href="/admin/person/addbookmark/{{person.personid}}"> {{"bookmark.person"|trans }} </a></div>
+            <div class="editbutton"><a href = "/admin/person/detail/{{person.personid}}" > {{'edit.person'|trans }}</a></div>
+            <div class="returnbutton"> <a href = "{{returnlink}}" >{{'.back'|trans }} </a></div>
+             {% if is_granted('ROLE_ADMIN') %} 
+                <div class="deletebutton"> <a href = "/admin/person/delete/{{person.personid}}"  Onclick="return ConfirmDelete()"  >{{'.delete'|trans }} </a></div>
+             {% endif %}
+          </div>
+        {% endif %}
+            
+        
+           <div class="imagegroup heading" >
+           
+           <div class="label" > {{'.images'|trans }} </div>  <div class="tooltip">?  <span class="tooltiptext">{{'to.add.images.use.bookmarks'|trans }}</span>
+              </div>
+                {% if images %}
+             <div class="images">
+                {% for image in images %}
+                <div class="image">
+                    <div class="imageimage" ><a href="{{image.link}}" ><img src="{{image.fullpath}}" /></a></div>
+                    <div class="imagelabel" >{{image.title}}</div>
+                    <div class="imagedelete deletebutton" ><a href="/admin/person/removeimage/{{person.personid}}/{{image.imageid}}" Onclick="return ConfirmDelete()" >{{'.delete'|trans }}</a></div>
+                </div>
+                {% endfor %}
+             </div>
+              {% endif %}  
+           </div>
+        
+            
+            
+        <div class="refgroup" >
+        <div class="heading" >
+           <div class="label"> {{'.links'|trans}}</div>  <div class="tooltip">?  <span class="tooltiptext">{{'to.add.link.use.bookmarks'|trans }}</span>
+              </div>
+         </div>
+         <div class="reflist">
+         {% for ref in refs %}
+         <div class="subsubheading">
+               <div class="refref" >{{ref.label}}</div>
+               <div class="deletebutton button1" ><a href="/admin/person/removelink/{{person.personid}}/{{ref.id}}" Onclick="return ConfirmDelete()" >{{'.delete'|trans }}</a></div>
+        </div>
+           {% endfor %}
+         </div>
+       </div>
+            
+        {% if text  %}
+           <div class="textpanel heading" >
+            <div class="label" > {{'.texts'|trans }} </div>
+                <div class="edit editbutton button1">
+                   <a href = "/admin/text/person/{{person.personid}}"   > {{'edit.text'|trans }}</a>
+                </div>
+          
+            </div>
+        {%else%}
+            <div  class="notext heading" >
+                <div class="label red" >  {{'no.text'|trans }}  </div>
+                <div class="editbutton button1" ><a href = "/admin/text/person/{{person.personid}}"   >  {{'add.text'|trans }}</a></div>
+            </div>
+        {% endif %}
+            
+            
+         
+      
+          <div class="participants" >
+          <div class="heading" > 
+             <div class= 'label'>
+                 {{'participated.in.events'|trans }}
+              </div>
+              <div class="tooltip">?  <span class="tooltiptext">{{'to.add.participation.use.bookmarks'|trans }}</span>
+              </div>
+              </div>
+                {% if participants %}
+                <div class="participantlist" >
+                {% for participant in participants %}
+                    <div class="participant selectable" >
+                     <div > {{ participant.label}}</div>
+                     <div class="editbutton button1" ><a href="{{participant.vue}}">{{'vue'|trans }}</a></div>
+                      <div class="editbutton " ><a href="{{participant.link}}">{{'.edit'|trans }}</a></div>
+                 
+                    {% if(not participant.incidents )%}    
+                    <div class="deletebutton" ><a href="/admin/person/deleteparticipation/{{person.personid}}/{{participant.id}}" Onclick="return ConfirmDelete()" >{{'.delete'|trans }}</a>
+                    </div>
+                    {% endif%}
+                    </div>
+                    {% for incident in participant.incidents %}
+                       <div class="incident" >{{ incident.label}}</div>
+                    {% endfor %}
+                {% endfor %}
+                </div>
+                 {% endif %}
+          </div>
+       
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block right %}
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+{% endblock%}

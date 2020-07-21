@@ -1,0 +1,53 @@
+div.form {
+margin-top:20px;
+}
+
+div.form div label.required {
+xcolor:red;
+font-size:1em;
+width:12em;
+}
+
+div.form form div {
+align-items:center;
+display:flex;
+flex-direction:row;
+padding-right:9px;
+text-align:right;
+}
+
+div.form form div div {
+display:block;
+}
+
+div.form form div label {
+color:#FF0;
+display:block;
+font-size:1em;
+padding-right:9px;
+width:12em;
+}
+
+div.form form row {
+display:flex;
+}
+
+div.form form row label,div.form form div label.required {
+
+xcolor:red;
+font-size:1em;
+width:12em;
+}
+
+input#complete_reg_form_newregistrationcode
+{
+    height: 1em;
+    -moz-appearance:textfield;
+}
+
+input#user_reg_form_interet
+{
+    
+height :4em;
+width:50em;
+}

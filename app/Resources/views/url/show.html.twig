@@ -1,0 +1,74 @@
+{# views/url/show.html.twig #}
+
+{% extends 'user.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('css/url/url.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+  
+     function clickevent(eid)
+     {
+       
+     }
+     function clickimage(iid)
+     {
+       
+     }
+     
+   </script>
+{%endblock%}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="url" >
+   {% if message or message != '' %}
+     <h1> {{message}}</h1>
+{% endif %}
+  
+   <div class="heading">
+     <div class="label">
+      {{'a.link.to'|trans}} 
+     </div>
+     <div class="title">
+      {{ url.label }}
+     </div>
+  
+      <div class="returnbutton button1"> <a href = "/{{lang}}/url/show/all">{{'.back'|trans }} </a> </div>
+                 {% if is_granted('ROLE_ADMIN') %}  
+             <div class="editbutton" > <a class="editbutton" href="/admin/url/edit/{{url.id}}" >{{"edit.link"|trans }} </a> </div>
+            {% endif %}
+  </div>
+
+<div  class="datatable" >
+<div class="datarow">
+<div class="label"> {{'.title'|trans }}</div>
+<div class ="data" >{{url.label}}</div>
+</div>
+<div class="datarow">
+<div class="label"> {{'.url'|trans }}</div>
+<div class ="data" >{{url.url}}</div>
+</div>
+<div class="datarow">
+<div class="label"> {{'.tags'|trans }}</div>
+<div class ="data" >{{url.tags}}</div>
+</div>
+</div>
+
+<div class="visitbutton">
+<div class="returnbutton" > <a href="{{url.url}}"  target="_blank" >{{'.visit'|trans}}</a></div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block right %}
+
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+
+{% endblock%}

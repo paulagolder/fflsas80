@@ -1,0 +1,54 @@
+
+div#editincident div.heading
+{
+    display:flex;
+    color:maroon;
+    font-size:1em;
+    display:flex;
+}
+
+
+div#editincident div.heading div.label
+{
+
+    color:yellow;
+    font-size:1em;
+}
+
+div#editincident div.heading div.title
+{
+
+    color:maroon;
+    font-size:1em;
+}
+
+div#editincident > div
+{
+    margin-top:20px;
+}
+
+div#editincident div.twocols
+{
+    display:flex;
+}
+
+div#editincident div.incident
+{
+    margin-top:5px; 
+}
+
+div#editincident div.incident div
+{
+    
+    margin-left:40px;
+    color:blue;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+ div#editincident div.form form div.itypeid div
+ {
+     display: flex;
+ }
+
+div#mapid  { height: 400px;  }

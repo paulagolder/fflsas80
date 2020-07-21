@@ -1,0 +1,38 @@
+ div#regack form div label
+ {
+     color: yellow;
+     font-size: 1em;
+     width: 10em;
+ }
+ 
+div#regack div.heading div.title
+{
+    padding-left:1em;
+    
+}
+
+
+div#regack form div
+{
+    display: flex;
+}
+
+div#regack div.message
+{
+    
+}
+
+div#regack div.label
+{
+     color: yellow;
+     font-size: 1.5em;
+}
+
+div#regack div.message
+{
+    padding-top: 20px;
+    display: block;
+    width: 90%;
+    color:blue
+}
+}

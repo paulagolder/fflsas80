@@ -1,0 +1,64 @@
+{# views/linkref/edit.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   <link href="{{ asset('linkref/edit.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+ {{ parent() }}
+ <script>
+  
+     function clickevent(eid)
+     {
+       
+     }
+     function clickimage(iid)
+     {
+       
+     }
+     
+   </script>
+{%endblock%}
+
+
+{% block middle %}
+<div id="middle" >
+  <div id="linkrefsedit" >
+   {% if message %}
+     <h1> {{message}}</h1>
+   {% endif %}
+   <div class="heading">
+   {% if ref %}
+     <div class="label">
+      {{'a.link.from'|trans}}
+     </div>
+     <div class="title">
+     {{label}}
+     </div> 
+      <div class="returnbutton"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+     
+  {% endif %}
+  </div>
+
+<div  class="form" >
+{{ form_start(form) }}
+    {{ form_row(form.objecttype) }}
+    {{ form_row(form.objid) }}
+    {{ form_row(form.label) }}
+    {{ form_row(form.path) }}
+    {{ form_row(form.doctype) }}
+    <button type="submit">{{'.submit'|trans}}</button>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block right %}
+
+   {{ render(controller('AppBundle\\Controller\\BookmarkController::setfield'))}}
+
+{% endblock%}

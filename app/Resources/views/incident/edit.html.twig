@@ -1,0 +1,95 @@
+{# views/incident/edit.html.twig #}
+
+{% import 'macros.twig' as m %}
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/incident/editone.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block js %}
+{{ parent() }}
+<script type="text/javascript">
+     function myLoadFunction()
+     {
+     //active bookmarks in red 
+    
+       document.getElementsByClassName("bookmarklocationlabel")[0].style.color = "#ff0000";
+
+     }
+    function seltype(eid)
+    {
+    document.getElementById('incident_form_itypeid').value = eid;
+    }
+    function clicklocation(lid)
+    {
+    document.getElementById('incident_form_locid').value = lid;
+    }
+    
+</script>
+{%endblock%}
+
+
+{% block middle %}
+<div id="middle" >
+    
+    <div id="editincident"  >
+        <div class="heading">
+            <div class="label" > {{'edit.incident'|trans }} </div>
+            <div class="title" >{{personname}} : {{eventlabel}} </div>
+            <div class="deletebutton button1" > <a class="deletebutton" href="/admin/incident/delete/{{incidentid}}" Onclick="return ConfirmDelete()" >{{'.delete'|trans}}</a></div>
+            <div class="returnbutton"> <a href ="{{returnlink}}" >{{'.back'|trans }} </a> </div>
+        </div>
+        <div class="twocols">
+            <div class="colone">
+                <div  class="form" >
+                    {{ form_start(form) }}
+                    {{ form_row(form.personid)}}
+                    {{ form_row(form.eventid) }}
+                    <div class="itypeid" > {{ form_row(form.itypeid) }}
+                        
+                        <div class="itypelist" >
+                            <select id="itypelist" onchange="seltype(this.value)" >
+                                {% for itype in itypes %} 
+                                {% if (itype.itypeid ) == itypeid %}
+                                <option value = "{{itype.itypeid}}" selected="selected"  >{{itype.label}}</option>
+                                {% else %}
+                                <option value = "{{itype.itypeid}}">{{itype.label}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                            </div> </div>
+                    {{ form_row(form.namerecorded) }}
+                    {{ form_row(form.rank) }}
+                    {{ form_row(form.locid) }}
+                    {{ form_row(form.role) }}
+                    {{ form_row(form.comment) }}
+                    {{ form_row(form.sdate) }}
+                    {{ form_row(form.edate) }}
+                    {{ form_row(form.sequence) }}
+                    
+                    <button type="submit">{{'.submit'|trans}}</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="coltwo">
+                <form name="incidenttype_form" method="get" action="/admin/incident/newtype/{{incidentid}}">
+                    
+                    <div class="subheading" >
+                        <div class="label"> {{'create.new.incident.type'|trans}}</div>
+                    </div>
+                    New Label: <input type="text" name="_newlabel"><br>
+                      <input type="submit" value="Submit New Type">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}
+    
+    
+    {% block right %}
+    
+    {% endblock%}
+    
+    

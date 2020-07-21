@@ -1,0 +1,157 @@
+
+
+
+div#person div.pageheading
+{
+    display:flex;
+    xalign-items: center;
+}
+
+
+
+
+
+div#person > div
+{
+    xmargin-left: 5em;
+    margin-top: 20px;
+}
+
+
+div#person div.refgroup
+{
+    display:flex;
+}
+
+
+div#person div.refgroup div.reflabel
+{
+    color:yellow;
+}
+
+div#person div.refgroup div.ref a
+{
+    margin-left:1em;;
+}
+
+
+div#person div.refgroup div.ref a
+{
+    color:blue;
+    text-decoration:none;
+}
+
+div#person div.text
+{
+   margin-left: 5em;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+
+div#person div.text p
+{
+    margin-top:5px;
+    margin-bottom : 5px;
+}
+
+
+html body div#page div.mypage div.mypageinner div#middle div.eventtree ul li ul li ul li ul li div.incident
+
+
+
+
+div#person div.eventtree ul li div.incident
+{
+    margin-left: 1em;
+}
+
+div#person div.eventtree ul li div.incident > a
+{
+    color: white;
+}
+
+div#person div.eventtree ul li div.incident > a:hover
+{
+    color: blue;
+}
+
+div#person div.image
+{
+    max-width: 138px;
+    flex-grow: 1;
+    
+    
+}
+
+div#person div.imagegroup
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div#person div.imagegroup div.image img
+{
+    margin:10px;
+    max-width:150px;
+    max-height:150px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div#person div.imagegroup div.imagelabel
+{
+    text-align: center;
+    vertical-align: middle;
+    color:blue;
+    font-size:1em;
+}
+
+
+
+
+div#person div.eventtree
+{
+    font-size : 1em;
+    margin-left: 2em;
+    color : blue;
+    margin-top:2em;
+}
+
+
+@media  only screen and (max-width: 538px) 
+{
+
+  
+div#person  div.eventtree
+{
+    font-size: 0.8em;
+    margin-left: 1em;
+    color: blue;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div#person div.imagelabel
+{
+    font-size : 0.8em;
+}
+
+div#person div.text
+{
+   margin-left: 1em;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+
+div#person div.text p
+{
+    margin-top: 0.1em;
+    margin-bottom : 0.1em;
+}
+
+}

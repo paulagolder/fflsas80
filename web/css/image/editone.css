@@ -1,0 +1,75 @@
+
+div#image > div
+{
+    margin-top:20px;
+}
+
+
+div#image div.heading
+{
+   display:flex;
+
+   
+}
+
+div#image div.heading div.heading
+{
+   color:blue;
+}
+
+
+div#image div.path
+{
+  
+font-size: 0.8em;
+color: silver;
+}
+
+div#image div.content
+{
+     display: flex;
+     flex-direction: row;
+   
+}
+
+div#image div.image
+{
+   flex-grow: 2;
+   flex-shrink: 9;
+   flex-basis: 25em;
+}
+
+div#image div.refs
+{
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0em;
+   padding-left: 10px;
+}
+
+div#image img
+{
+    width: 100%;
+    max-width: 400px;
+    xmax-height: 500px;
+    xdisplay: block;
+    height: auto;
+}
+
+div#image div.linksheading
+{
+    font-size:1.5em;
+}
+
+
+div#image div.linksgroup
+{
+    font-size:1em;
+    font-style:italic;
+}
+
+div#image div.ref
+{
+    font-size:1em;
+    color:white;
+}

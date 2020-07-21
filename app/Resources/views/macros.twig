@@ -1,0 +1,42 @@
+
+
+{% macro tree(child, incidents) %}
+    {% import _self as m %}
+    <a href = "{{ child.getLink() }} " > {{ child.label("FR") }}  </a> <span> {{child.participantinfo}}</span>
+    {% if incidents %}
+    {% for incident in incidents %}
+    {% if incident.eventid == child.eventid %}
+    <div class='incident' >    <a href = "{{ incident['link'] }} " > {{incident['label']  }}</a></div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+        {% if child.children %}
+        <ul>
+            {% for i in child.children %}
+                <li>
+                {{ m.tree(i, incidents) }} 
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+
+{% macro links(label, list, class) %}
+{% if list %}
+   {% if (list | length ) < 6  %}
+  <div class="linklist">
+     {% else %}
+  <div class="longlinklist">
+     {% endif %}
+     <div class='label'>{{ label|trans }}</div>
+     <div class="list" >
+     {% for key, link in list  %}
+        <div class='link' ><a href='{{link.link}}' >{{link.label }}</a> </div>
+     {% endfor %}
+     </div>
+  </div>
+{% endif %}
+{% endmacro %}
+
+

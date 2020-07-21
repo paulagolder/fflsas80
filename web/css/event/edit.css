@@ -1,0 +1,217 @@
+ 
+  
+div#editevent
+{
+    
+   margin-top :2em;
+   font-size :1em;
+   color : red;
+}
+    
+    div#editevent > div
+    {
+       margin-top:10px;
+       margin-bottom:10px;
+       margin-left:20px;
+    }
+
+    
+    
+div#editevent div.breadcrumbs a
+{
+     color:blue;
+     text-decoration:none;
+}
+     
+div#editevent div.text
+{
+   margin-left: 5em;
+   font-size: 1.2em;
+}
+
+div#editevent div.dates
+{
+   font-size :1em;
+   color : white; 
+}
+
+div#editevent div.heading 
+{
+    display:flex;
+    align-content: center;
+    align-items: center;
+    height:20px;
+}
+
+div#editevent div.imagegroup
+{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+}
+
+div#editevent div.imagegroup div.imageedit
+{
+    flex:1;
+}
+
+div#editevent div.imagegroup div.images
+{
+    flex:2;
+    display:flex;
+    height: 200px;
+    overflow: auto;
+    border: 2px solid blue;
+}
+
+div#editevent div.imagegroup div.images div.image
+{
+    max-width: 138px;
+flex-grow: 1;
+    
+}
+
+
+
+
+
+div#editevent div.imagegroup div.images div.image div.imageimage a img
+{
+    margin:10px;
+    max-width:100px;
+    max-height:100px;
+}
+
+
+
+div#editevent div.textpanel div.text
+{
+    color:blue;
+}
+
+
+
+div#editevent div.refgroup
+{
+   margin-top:40px;   
+    
+}
+
+div#editevent div.refgroup div.header
+{
+   display:flex;   
+    
+}
+
+div#editevent div.refgroup div.header div.label
+{
+   color:yellow   ;
+    
+}
+
+div#editevent div.refgroup div.ref
+{
+    margin-top:10px;
+}
+
+div#editevent  div.notext  
+{
+    margin-top : 2em;
+    color:red;
+    font-size:1em;
+}
+
+div.noparticipants
+{
+     margin-top : 2em;
+}
+
+
+div#editevent div.textpanel
+{
+    display:flex;
+    align-items: center;
+}
+
+div#editevent div.textpanel div.text
+{
+    flex:10;
+    height: 20em;
+    overflow: auto;
+    border: 2px solid blue;
+}
+
+div#editevent div.textpanel div.edit
+{
+    flex:;
+}
+
+xdiv#editevent  div.participants div.heading 
+{
+    color:red;
+    margin-left: 1em;
+    margin-top:15px;
+}
+
+div#editevent  div.participants
+{
+    margin-left:1em;
+    margin-top:15px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+
+div#editevent div.participants div.participant a
+{
+   color:blue;
+   text-decoration : none;
+}
+
+div#editevent  div.participants  div.participant
+{
+     width:10em;
+}
+
+div#editevent  div.participants  div.incident
+{
+    color:white;
+    margin-left:3em;
+    margin-top:5px;
+}
+ 
+
+ 
+div#editevent div.children div.subheading
+{
+    display:flex;
+    align-content: center;
+    align-items: center;
+  
+}
+ 
+div#editevent div.children div.subheading div.label
+{
+    color:yellow;
+    font-size:20px;
+    
+}
+ 
+div#editevent div.children
+{
+    margin-top:10px;
+}
+    
+div#editevent div.children div.child
+{
+    display:flex;
+}
+
+div#editevent div.children div.child a
+{
+    color:blue;
+    text-decoration:none;
+}
+    

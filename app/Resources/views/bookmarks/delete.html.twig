@@ -1,0 +1,28 @@
+
+
+
+{% block stylesheets %}
+   <link href="{{ asset('/css/bookmark/bookmarks.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+ 
+   <div id="bookmarks" >
+ 
+     <h1 class="heading">{{'.bookmarks'|trans }}</h1> 
+     {% for key1, blist in blists  %}
+        <div class="bookmarkheading"> {{key1}}</div>
+       {% for key in blist | keys  %} 
+     {% if   blist[key]['fullname'] is defined %}
+        <div class="bookmarkdelete" >
+        <a href="/admin/bookmarks/delete/{{key1}}/{{key}}?source={{source | escape }}">{{blist[key]['fullname'] }}</a>
+      </div>
+     {% else %}
+      <div class="bookmarkdelete" >
+        <a href="/admin/bookmarks/delete/{{key1}}/{{key}}?source={{source | escape }}">{{blist[key]['label'] }}</a>
+      </div>
+      {% endif %}
+      {%endfor%}
+     {% endfor %}
+    </div>
+

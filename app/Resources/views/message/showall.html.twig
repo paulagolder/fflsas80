@@ -1,0 +1,48 @@
+{# views/message/showall.html.twig #}
+
+
+
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/message/showall.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+ <div id="message"  >
+    <div class="heading">
+        <div class="label" > {{'see.admin.messages'|trans }}</div>
+    </div>
+          <div class="subheading" >
+            <div class="label" > {{'message.list'|trans }}</div>
+        </div>  
+    
+    <div class="messagelist list" >
+        {% for message in messages %}
+        <div class= "message  selectable">
+        {% if message.fromname == 'FFLSAS-admin' or message.fromname == 'FFLSAS75-admin' or message.fromname == 'ADMIN75' %}
+           <div class="name" > {{'from.admin.to'|trans }} {{message.toname}}</div>
+        {% else %}
+           <div class="name" > {{'.from'|trans }} {{message.fromname}} </div>
+        {% endif %}
+            <div class= "date" > {{message.date_sent | date("Y-m-d") }}</div>
+            <div class="subject" > {{message.subject}}</div>
+            
+            <div class = "body" > {{  message.body | raw  }}</div>
+            <div class = "editbutton button1">
+                <a class='editbutton' href="/admin/message/{{message.id}}">{{'view.message'|trans}}</a>
+            </div>
+            <div class = "deletebutton">
+                <a class='deletebutton' href="/admin/message/delete/{{message.id}}"  Onclick="return ConfirmDelete()" >{{'delete.message'|trans}}</a>
+            </div>
+        </div>
+        {% endfor %}
+ </div>       
+  </div>
+  </div>
+{% endblock %}
+    

@@ -1,0 +1,39 @@
+{# views/user/adminedit.html.twig #}
+
+
+
+{% extends 'admin.html.twig' %}
+
+{% block stylesheets %}
+      {{ parent() }}
+   
+{% endblock %}
+
+
+{% block middle %}
+<div id="middle" >
+<div id="fuser"  >
+  <div class="heading" >
+  {% if fuser.id >0 %}
+    <div class="label" > {{'edit.user'|trans }}</div>
+    <div class="title" > {{ fuser.label }}</div>
+    <div class="returnbutton button1"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+ {% else %}
+   <div class="label" > {{'new.user'|trans }}</div>
+       <div class="returnbutton button1"> <a href = {{returnlink}} >{{'.back'|trans }} </a> </div>
+ {%  endif %}
+</div>
+ <div  class="form" >
+    {{ form_start(form) }}
+      {{ form_row(form.username) }}
+      {{ form_row(form.plainPassword) }}
+      {{ form_row(form.rolestr) }}
+      {{ form_row(form.membership) }}
+      {{ form_row(form.email) }}
+      {{ form_row(form.locale) }}
+    <button type="submit">{{'.submit'|trans}}</button>
+   {{ form_end(form) }}
+</div>
+</div>
+</div>
+{% endblock %}
